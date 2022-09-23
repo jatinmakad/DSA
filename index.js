@@ -722,7 +722,6 @@
 // }
 // console.log(Func())
 
-
 // ********
 //  ******
 //   ***
@@ -746,7 +745,6 @@
 //   return str
 // }
 // console.log(Func())
-
 
 // leetecode -----------
 // let a = "1010", b = "101"
@@ -815,8 +813,8 @@
 // }
 // console.log(Func(s))
 
-// selection sort 
-// moving smaller value to first 
+// selection sort
+// moving smaller value to first
 // function Swap(arr, i, j) {
 //   let temp = arr[i]
 //   arr[i] = arr[j]
@@ -861,55 +859,651 @@
 // }
 // console.log(MergeSort(arr1,arr2))
 
-
-// Linked list
-// class LinkedList {
-//   constructor(data) {
-//     this.head = {
-//       value: data,
-//       next: null
-//     }
-//     this.tail = this.head
-//     this.length = 1
-//   }
-//   append(data) {
-//     const newNode = {
-//       value: data,
-//       next: null
-//     }
-//     this.tail.next = newNode;
-//     this.tail = newNode
-//     this.length++
-//   }
-//   prepend(data) {
-//     const newNode = {
-//       value: data,
-//       next: null
-//     }
-//     newNode.next = this.head
-//     this.head = newNode
-//     this.length++
-//   }
-//   // insert(data){
-
-//   // }
-//   // delete(data){
-
-//   // }
-// }
-// const myList = new LinkedList(10)
-// myList.append(18)
-// myList.append(30)
-// myList.prepend(3)
-// console.log(myList)
-
 // leetecode -------
 // function Func(arr) {
 //   for (i = 1; i < arr.length; i++) {
 //     console.log(arr[i],arr[i-1])
 //     arr[i] += arr[i - 1]
-   
+
 //   }
 //   return arr
 // }
 // console.log(Func([3, 1, 2, 10, 1]))
+
+// Linked list ---------------
+// class LinkeList {
+//   constructor(data) {
+//     this.head = {
+//       value: data,
+//       next: null,
+//     };
+//     this.tail = this.head;
+//     this.length = 1;
+//   }
+//   append(data) {
+//     let newNode = {
+//       value: data,
+//       next: null,
+//     };
+//     this.tail.next = newNode;
+//     this.tail = newNode;
+//     this.length++;
+//   }
+//   prepend(data) {
+//     let newNode = {
+//       value: data,
+//       next: null,
+//     };
+//     newNode.next = this.head;
+//     this.head = newNode;
+//     this.length++;
+//   }
+//   traverse(req) {
+//     let counter = 0;
+//     let currentNode = this.head;
+//     while (counter != req) {
+//       counter++;
+//       currentNode = currentNode.next;
+//     }
+//     return currentNode;
+//   }
+//   insert(index, data) {
+//     let newNode = {
+//       value: data,
+//       next: null,
+//     };
+//     const leaderNode = this.traverse(index - 1);
+//     let nextNode = leaderNode.next;
+//     leaderNode.next = newNode;
+//     newNode.next = nextNode;
+//     this.length++;
+//   }
+//   delete(index) {
+//     let leaderNode = this.traverse(index - 1);
+//     let deleteNode = leaderNode.next;
+//     let nextNode = deleteNode.next;
+//     leaderNode.next = nextNode;
+//     this.length--;
+//   }
+//   reverse() {
+//     let first = this.head;
+//     this.tail = this.head;
+//     let last = first.next;
+//     while (last) {
+//       let temp = last.next;
+//       last.next = first;
+//       first = last;
+//       last = temp;
+//     }
+//     this.head.next = null;
+//     this.head = first;
+//   }
+// }
+// let test = new LinkeList(30);
+// test.append(20);
+// test.append(2);
+// test.append(5);
+// // test.insert(1, 8);
+// // test.delete(1);
+// test.reverse();
+// console.log(test);
+
+// Stack with array
+// class Stack {
+//   constructor() {
+//     this.array = [];
+//   }
+//   append(data) {
+//     this.array.push(data);
+//   }
+//   peak() {
+//     console.log(this.array[this.array.length - 1]);
+//   }
+//   remove() {
+//     this.array.pop();
+//   }
+// }
+
+// Stack with linked list
+
+// class Node {
+//   constructor(data) {
+//     (this.value = data), (this.next = null);
+//   }
+// }
+// class Stack {
+//   constructor() {
+//     this.top = null;
+//     this.length = 0;
+//   }
+//   append(data) {
+//     const myNode = new Node(data);
+//     if (this.length == 0) {
+//       this.top = myNode;
+//     } else {
+//       let holding = this.top;
+//       this.top = myNode;
+//       myNode.next = holding;
+//     }
+//     this.length++
+//   }
+// }
+// const stack = new Stack();
+// stack.append(1);
+// stack.append(2);
+// stack.append(3);
+// console.log(stack);
+
+// practive LinkedList
+// class LinkedList {
+//   constructor(data) {
+//     this.head = {
+//       value: data,
+//       next: null,
+//     };
+//     this.tail = this.head;
+//     this.length = 1;
+//   }
+//   append(data) {
+//     const newNode = {
+//       value: data,
+//       next: null,
+//     };
+//     this.tail.next = newNode;
+//     this.tail = newNode;
+//     this.length++;
+//   }
+//   prepend(data) {
+//     const newNode = {
+//       value: data,
+//       next: this.head,
+//     };
+//     this.head = newNode;
+//     this.length++;
+//   }
+//   travers(req) {
+//     let count = 0;
+//     let currentNode = this.head;
+//     while (count !== req) {
+//       count++;
+//       currentNode = currentNode.next;
+//     }
+//     return currentNode;
+//   }
+//   deleteFromIndex(index) {
+//     let current = this.travers(index - 1);
+//     let nextNode = current.next;
+//     current.next = nextNode.next;
+//     this.length--;
+//   }
+//   reverse(){
+//     this.tail = {
+//       value:this.head.value,
+//       next:null
+//     }
+//   // this.head =
+//   }
+// }
+// const test = new LinkedList(30);
+// test.append(20);
+// test.append(10);
+// test.append(5);
+// // test.prepend(2);
+// // test.deleteFromIndex(1);
+// test.reverse()
+// console.log(test, "test");
+
+// leetecde ------
+// let nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3
+// function Func(){
+// }
+// console.log(Func())
+
+// let arr = [2,0,2,1,1,0]
+// function Func(temp,tempInner){
+// //   return arr.sort()
+// let count = temp;
+// let countInner = tempInner
+// if(temp == arr.length){
+//     return
+// }
+// if(tempInner == arr.length){
+//     count = temp + 1
+//     Func(count,countInner)
+// }
+// console.log(tempInner,"tyemp")
+//  countInner = tempInner + 1
+//  Func(count,countInner)
+
+// }
+// Func(0,0)
+// console.log(Func([2,0,2,1,1,0]))
+
+// let intervals = [
+//   [1, 3],
+//   [0, 9],
+// ];
+// let updated = [];
+// console.log(intervals.sort((a,b) => a[0] - b[0]))
+// function Func(intervals) {
+//   if (intervals.length == 1 || intervals.length == 0) {
+//     return intervals;
+//   } else {
+//     for (i = 0; i < intervals.length - 1; i++) {
+//       if (intervals[i][1] <= intervals[i + 1][1]) {
+//         let sor = [
+//           intervals[i][0],
+//           intervals[i][1],
+//           intervals[i + 1][0],
+//           intervals[i + 1][1],
+//         ].sort();
+//         updated.push([sor[0], sor[sor.length - 1]]);
+//         i++;
+//       } else {
+//         updated.push(
+//           [intervals[i][0], intervals[i][1]],
+//           [intervals[i + 1][0], intervals[i + 1][1]]
+//         );
+//       }
+//     }
+//     return updated;
+//   }
+// }
+// console.log(Func(intervals));
+
+// leetcode -------
+// function Func(a, b) {
+//   let first = a.split("");
+//   let second = b.split("");
+//   let high = first.length > second.length ? first : second;
+//   let carry = 0
+//   let updated = []
+//   for (i = high.length - 1; i >= 0; i--) {
+//     if(first[i] == undefined ? 0 : first[i] + second[i] == undefined ? 0 : second[i] + carry >= 10){
+//       let cont = first[i] == undefined ? 0 : first[i] + second[i] == undefined ? 0 : second[i] + carry
+//     //  updated.push(cont[1])
+//     //  carry = cont[0]
+//     console.log(cont)
+//     }
+//   }
+//   return updated
+// }
+// console.log(Func("112", "12"));
+
+//leetcode -----
+// function Func(a) {
+//   let arr = [];
+//   let map = new Map()
+//   let updated = a.split("");
+//   if (updated.length == 0 || updated.length == 1) {
+//     return updated.length;
+//   } else {
+//     for (i = 0; i < updated.length - 1; i++) {
+//       for (j = i + 1; j < updated.length; j++) {
+//         if (updated[i] == updated[j]) {
+//           // arr.push(updated[j]);
+//           // map.set()
+//           console.log(updated[j])
+//         }
+//       }
+//     }
+//     return arr.length;
+//   }
+// }
+// console.log(Func("ccccccccc"));
+
+// leetcode -------
+// let strs = ["eat", "tea","tae"];
+// let updated = [];
+// for (i = 0; i < strs.length - 1; i++) {
+//     let temp = strs[i]
+//     if (
+//       temp.split("").sort().join("") == strs[i+1].split("").sort().join("")
+//     ) {
+//       updated.push(strs[i+1],strs[i]);
+// }
+// }
+// console.log(updated, "map");
+
+// leetecode ------
+// function func(str){
+//     let temp = str.replace(/\s\s+/g, ' ').split(' ');
+//     let left = 0 ;
+//     let right = temp.length;
+//     while(left !== right){
+//         let count = temp[left]
+//         temp[left] = temp[right]
+//         temp[right] = count
+//         left++
+//         right--
+//     }
+//     console.log(temp.join(' ').trim(),"======")
+//     return temp.join(' ').trim()
+// }
+// console.log(func("the sky is blue"))
+
+// techincal DSA -----
+// function Func(arr) {
+//   if (arr.length > 0) {
+//     let i = 0;
+//     for (j = 1; j < arr.length; j++) {
+//       if (arr[i] !== arr[j]) {
+//         i++;
+//         arr[i] = arr[j];
+//       }
+//     }
+//     return i + 1;
+//   }
+// }
+// console.log(Func([1, 1, 2, 2, 3, 4, 4, 5, 6, 7, 8, 8]));
+
+// techincal DSA ------
+// function Func(arr) {
+//   let left = 0;
+//   let right = 1;
+//   let count = 0;
+//   let updated = [];
+//   while (left !== arr.length - 1) {
+//     if (arr[left] + arr[right] + arr[right + 1] + arr[right + 2] > count) {
+//       count = arr[left] + arr[right] + arr[right + 1] + arr[right + 2];
+//       updated = [arr[left], arr[right], arr[right + 1], arr[right + 2]];
+//       left++;
+//       right++;
+//     } else {
+//       left++;
+//       right++;
+//     }
+//   }
+//   return count;
+// }
+// console.log(Func([1, 2, 3, 4, 5, 3, 5, 6, 7, 8].reverse()));
+
+// function Func(arr, nums) {
+//   let max = 0;
+//   for (i = 0; i < arr.length - nums + 1; i++) {
+//     let temp = 0;
+//     for (j = 0; j < nums; j++) {
+//       temp += arr[j + i];
+//     }
+//     if (temp > max) {
+//       max = temp;
+//     }
+//   }
+//   return max;
+// }
+// console.log(Func([1, 2, 3, 4, 5, 3, 5, 6, 7, 8], 4));
+
+// technical DSA ----
+// function Func(ar1, ar2) {
+//   let updated = [];
+//   for (i = 0; i < ar1.length; i++) {
+//     for (j = 0; j < ar2.length; j++) {
+//       if (ar1[i] * ar1[i] === ar2[j]) {
+//         updated.push(ar1[i]);
+//       }
+//     }
+//   }
+//   return updated
+// }
+// console.log(Func([1, 2, 3, 4], [1, 9, 4, 16]));
+
+// sort array using recursion
+// let i = 0;
+// let j = 1;
+// let updated = []
+// function check(arr) {
+//   for (i = 0; i < arr.length; i++) {
+//     if (arr[i] > arr[i + 1]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// function sort(arr) {
+//   if (check(arr)) {
+//     updated = arr
+//     return
+//   } else if (arr[i] < arr[j]) {
+//     i++;
+//     j++;
+//     sort(arr);
+//   } else {
+//     let temp = arr[i];
+//     arr[i] = arr[j];
+//     arr[j] = temp;
+//     i = 0;
+//     j = 1;
+//     sort(arr);
+//   }
+// }
+// console.log(sort([2, 3, 51, 78, 1, 9, 0]));
+// // console.log(updated)
+
+// function Func(str) {
+//   let map = {};
+//   let updated = str.split("");
+//   for (i = 0; i < updated.length; i++) {
+//     map[updated[i]] = map[updated[i]] ? map[updated[i]] + 1 : 1;
+//   }
+//   let max = 1;
+//   char = updated[0];
+//   for (let k in map) {
+//     if (map[k] > max) {
+//       max = map[k];
+//       char = k;
+//     }
+//   }
+//   return char;
+// }
+// console.log(Func("Hello worldddd"));
+
+// leetecode -------
+// valid anagram
+// function Func(str1, str2) {
+// let s1 = str1.split("")
+// let s2 = str2.split("")
+// let hash = {}
+// for(i=0;i<s1.length;i++){
+//     hash[s1[i]] = hash[s1[i]] ? hash[s1[i]] + 1 : 1
+// }
+// for(i=0;i<s2.length;i++){
+//     hash[s2[i]] = hash[s2[i]] ? hash[s2[i]] + 1 : 1
+// }
+// console.log(hash)
+//   let s1 = str1.split("").sort((a,b) => a > b ? 1 : -1).join("");
+//   let s2 = str2.split("").sort((a,b) => a > b ? 1 : -1).join("");
+//   if(s1 == s2){
+//     return true
+//   } else {
+//     return false
+//   }
+// }
+// console.log(Func("anagam", "nagaram"));
+
+// longest palindrome leetecode --------
+// function Func(str) {
+//   str.split("");
+//   let map = new Map();
+//   for (i = 0; i < str.length; i++) {
+//     if (map.has(str[i])) {
+//       map.set(str[i], map.get(str[i]) + 1);
+//     } else {
+//       map.set(str[i], 1);
+//     }
+//   }
+
+//   let counter = 0;
+//   let leftover = 0;
+//   map.forEach((v, k) =>{
+//       if(v % 2 === 0){
+//           counter += v
+//       }else if(v % 2 === 1 && v > 2){
+//           counter +=v-1
+//           leftover +=1
+//       }else{
+//           leftover +=1
+//       }
+//   })
+//   return map.size === 1 ? s.length : leftover ? counter + 1 : counter
+// }
+// console.log(Func("babad"));
+
+// leetcdode longest palindrome substring -----
+// function Func(str) {
+//   str.split("");
+//   let left;
+//   let right;
+//   if (str.length % 2 == 0) {
+//     left = Math.round(str.length / 2) - 1;
+//     right = Math.round(str.length / 2);
+//   } else {
+//     left = Math.round(str.length / 2) -1;
+//     right = Math.round(str.length / 2) - 1;
+//   }
+//   let temp = [];
+//   while (left !== 0) {
+//     if (str[left] == str[right]) {
+//       temp.push(str[right]);
+//       temp.unshift(str[left]);
+//       left--;
+//       right++;
+//     } else {
+//       break;
+//     }
+//   }
+//   temp.join("");
+// }
+// console.log(Func("babba"));
+
+// 2nd method ------
+
+// function Func(s) {
+//   let max = [0, 1];
+//   for (i = 0; i < s.length; i++) {
+//     let even = getDrome(i - 1, i, s);
+//     let odd = getDrome(i - 1, i + 1, s);
+//     let curMax = odd[i] - odd[0] > even[1] - even[0] ? odd : even;
+//     max = max[1]
+//   }
+//   return screen.slice(max[0], max[1]);
+// }
+// console.log(Func("babad"));
+
+// first and last index in sorted array  --------
+// function Func(nums, target) {
+//   let left = 0;
+//   let right = nums.length - 1;
+//   let firstIndex;
+//   while (left <= right) {
+//     let start = Math.floor((left + right) / 2);
+//     if (nums[start] === target) {
+//       firstIndex = start;
+//       break;
+//     } else if (nums[start] < target) {
+//       left = start + 1;
+//     } else {
+//       right = start - 1;
+//     }
+//   }
+//   if (isNaN(firstIndex)) {
+//     return [-1, -1];
+//    }
+//   while (nums[firstIndex] === nums[firstIndex - 1]) {
+//     firstIndex--;
+//   }
+//   let temp = firstIndex;
+//   let secondIndex = firstIndex;
+//   while (temp !== nums.length) {
+//     if (nums[secondIndex] == target) {
+//       secondIndex++;
+//     } else {
+//       break;
+//     }
+//   }
+//   secondIndex = secondIndex - 1;
+//   return [firstIndex, secondIndex];
+// }
+// console.log(Func([5, 7, 7, 8, 8, 10], 8));
+
+// merge sorted array --------
+// function Func(nums1, m, nums2, n) {
+//   let updated = nums1.slice(0, m);
+//   let updated2 = nums2.slice(0, n);
+//   nums1 = [...updated, ...updated2];
+//   function swap(nums1, i, j) {
+//     let temp = nums1[i];
+//     nums1[i] = nums1[j];
+//     nums1[j] = temp;
+//   }
+//   for (i = 0; i < nums1.length; i++) {
+//     for (j = i + 1; j < nums1.length; j++) {
+//       if (nums1[i] > nums1[j]) {
+//         swap(nums1, i, j);
+//       }
+//     }
+//   }
+//   return nums1;
+// }
+// console.log(Func([1,2,3,0,0,0],3,[2,5,6],3));
+
+// intersection of two array
+// function Func(num1, num2) {
+//   let map2 = new Map();
+//   let map1 = new Map();
+//   for (i = 0; i < num2.length; i++) {
+//     if (!map2.has(num2[i])) {
+//       map2.set(num2[i], num2[i]);
+//     }
+//   }
+//   for (i = 0; i < num1.length; i++) {
+//     if (!map1.has(num1[i])) {
+//       map1.set(num1[i], num1[i]);
+//     }
+//   }
+//   if(map1.has(5)){
+//     console.log(map1.get(5))
+//   }
+// }
+// console.log(Func([4, 9, 5], [9, 4, 9, 8, 4]));
+
+// let temp = [];
+// let temp2= [];
+// function Func(arr) {
+//   arr.forEach((res) => {
+//     if (Array.isArray(res)) {
+//       Func(res);
+//     } else {
+//       temp.push(res);
+//     }
+//   });
+//     for (i = 0;i< arr.length; i++) {
+//       if(Array.isArray(arr)){
+//            Func(arr[i])
+//       } else {
+//           temp2.push(arr[i])
+//       }
+//     }
+// }
+// Func([[["a", "b"]], [[["c", "d"]]], ["e", "f"]]);
+// console.log(temp2);
+
+let mainArr = [];
+let temp = [];
+function Func(arr, count) {
+  let array = arr;
+  for (i = 0; i < array.length; i++) {
+    console.log(i, array.length);
+    if (i == count) {
+      mainArr.push(temp);
+      temp = [];
+      Func(array.splice(count, array.length), count);
+    } else if(i <= count) {
+      temp.push(array[i]);
+    } else {
+      temp.push(array[i]);
+    }
+  }
+}
+
+Func(["a", "b", "c", "d", "e", "f", "g"], 5);
+console.log(mainArr);
