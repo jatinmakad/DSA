@@ -277,3 +277,137 @@
 // // test.reverse();
 // // test.print();
 // console.log(test);
+
+// class Node {
+//   constructor(data) {
+//     this.value = data;
+//     this.next = null;
+//   }
+// }
+// class LinkedList {
+//   constructor() {
+//     this.head = null;
+//     this.size = 0;
+//     this.tail = null;
+//   }
+//   isEmpty() {
+//     return this.head === null;
+//   }
+//   append(value) {
+//     const node = new Node(value);
+//     if (this.isEmpty()) {
+//       this.head = node;
+//       this.tail = node;
+//       this.size++;
+//     } else {
+//       this.tail.next = node;
+//       this.tail = node;
+//       this.size++;
+//     }
+//   }
+//   prepend(value) {
+//     const node = new Node(value);
+//     if (this.isEmpty()) {
+//       this.head = node;
+//       this.tail = node;
+//       this.size++;
+//     } else {
+//       node.next = this.head;
+//       this.head = node;
+//       this.size++;
+//     }
+//   }
+//   deleteNode(value) {
+//     if (this.isEmpty()) {
+//       return;
+//     } else {
+//       let prev = this.head;
+//       if (this.head.value === value) {
+//         this.head = this.head.next;
+//         this.size--;
+//       } else {
+//         let mainPrev = prev;
+//         while (prev.value) {
+//           if (prev.value == value) {
+//             mainPrev.next = prev.next;
+//             this.size--;
+//             if (prev.next == null) {
+//               this.tail = mainPrev;
+//             }
+//             break;
+//           }
+//           mainPrev = prev;
+//           prev = prev.next;
+//         }
+//       }
+//     }
+//   }
+//   reverse() {
+//     let prev = null;
+//     let curr = this.head;
+//     this.tail = this.head;
+//     while (curr) {
+//       let next = curr.next;
+//       curr.next = prev;
+//       prev = curr;
+//       curr = next;
+//     }
+//     this.head = prev;
+//   }
+// }
+// const link = new LinkedList();
+// link.append(2);
+// link.append(4);
+// link.append(90);
+// link.prepend(8);
+// link.deleteNode(4);
+// link.reverse();
+// console.log(link);
+
+// class Node {
+//   constructor(data) {
+//     this.value = data;
+//     this.left = null;
+//     this.right = null;
+//   }
+// }
+
+// class BinarySearchTree {
+//   constructor() {
+//     this.root = null;
+//   }
+//   isEmpty() {
+//     return this.root === null;
+//   }
+//   insert(value) {
+//     const newNode = new Node(value);
+//     if (this.isEmpty()) {
+//       this.root = newNode;
+//     } else {
+//       this.insertNode(this.root, newNode);
+//     }
+//   }
+//   insertNode(root, node) {
+//     if (root.value > node.value) {
+//       if (root.left == null) {
+//         root.left = node;
+//       } else {
+//         this.insertNode(root.left, node);
+//       }
+//     } else if (root.value < node.value) {
+//       if (root.right == null) {
+//         root.right = node;
+//       } else {
+//         this.insertNode(root.right, node);
+//       }
+//     }
+//   }
+  
+// }
+// let node = new BinarySearchTree();
+// node.insert(20);
+// node.insert(10);
+// node.insert(5);
+// node.insert(3);
+// node.insert(6);
+// console.log(node);

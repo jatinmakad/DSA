@@ -1487,23 +1487,311 @@
 // Func([[["a", "b"]], [[["c", "d"]]], ["e", "f"]]);
 // console.log(temp2);
 
-let mainArr = [];
-let temp = [];
-function Func(arr, count) {
-  let array = arr;
-  for (i = 0; i < array.length; i++) {
-    console.log(i, array.length);
-    if (i == count) {
-      mainArr.push(temp);
-      temp = [];
-      Func(array.splice(count, array.length), count);
-    } else if(i <= count) {
-      temp.push(array[i]);
-    } else {
-      temp.push(array[i]);
-    }
-  }
-}
+// let mainArr = [];
+// function Func(arr, count) {
+//   let temp = [];
+//   let array = arr;
+//   for (i = 0; i < array.length; i++) {
+//     if (i == count) {
+//       mainArr.push(temp);
+//       let pop = array.splice(count, array.length)
+//       Func(pop, count);
+//     } else {
+//       temp.push(array[i]);
+//     }
+//   }
+//   if (array.length <= count) {
+//     mainArr.push(temp);
+//   }
+// }
 
-Func(["a", "b", "c", "d", "e", "f", "g"], 5);
-console.log(mainArr);
+// function Func(arr, count) {
+//   let temp = [];
+//   for (i = 0; i < arr.length; i++) {
+//     if (i >= count - 1) {
+//       mainArr.push(temp);
+//       let pop = arr.splice(count - 1, arr.length);
+//       Func(pop, count);
+//     } else {
+//       temp.push(arr[i]);
+//     }
+//     if(arr.length <= count - 1){
+//       // mainArr.push(temp);
+//       break
+//     }
+//   }
+
+// }
+
+// Func(["a", "b", "c", "d", "e", "f", "g"], 3);
+// console.log(mainArr);
+
+// shifting zero to end
+// let arr = [6, 0, 2, 0, 1, 5, 0, 9, 8];
+// function Test(nums) {
+//     let temp = [];
+//     for (i = 0; i < nums.length; i++) {
+//       if (nums[i] == 0) {
+//         temp.push(nums[i]);
+//       } else {
+//         temp.unshift(nums[i]);
+//       }
+//     }
+//     return temp;
+
+//   let counter = 0;
+//   for (i = 0; i < nums.length; i++) {
+//     if (nums[i] !== 0) {
+//       [nums[i], nums[counter]] = [nums[counter], nums[i]];
+//       counter++;
+//     }
+//   }
+//   return nums;
+// }
+// console.log(Test(arr));
+
+// let str1 = "silent";
+// let str2 = "listen";
+// function isAnagram(s1, s2) {
+//   if (s1.length !== s2.length) {
+//     return false;
+//   }
+//   let map = {};
+//   for (let item in s1) {
+//     map[s1[item]] = (map[s1[item]] || 0) + 1;
+//     map[s2[item]] = (map[s2[item]] || 0) - 1;
+//   }
+//   for (let item in map) {
+//     if (map[item] !== 0) {
+//       return false;
+//     }
+//   }
+//   return true;
+// }
+// console.log(isAnagram(str1, str2));
+
+// const name = "jatin";
+// const teest = () => {
+//   console.log(this.name);
+// };
+// teest();
+
+// let obj = {
+//     name:"jatin",
+//     getName:() => {
+//         console.log(this)
+//     },
+//     getName2:function(){
+//         console.log(this)
+//     }
+// }
+// obj.getName2()
+
+// const obj = {
+//   name: "jatin",
+//   getName() {
+//     console.log(this.name);
+//   },
+// };
+// setTimeout(obj.getName, 1000);
+
+// let s = "Let's take LeetCode contest";
+// function Test(str) {
+//   let temp = str.split(" ");
+//   for (i = 0; i < temp.length; i++) {
+//     let res = Reverse(temp[i]);
+//     temp[i] = res
+
+//   }
+//   return temp.join(' ')
+// }
+// function Reverse(s) {
+//   let str = s.split("");
+//   let start = 0;
+//   let end = s.length - 1;
+//   let mid = Math.floor((start + end) / 2);
+//   while (start <= mid) {
+//     let temp = str[start];
+//     str[start] = str[end];
+//     str[end] = temp;
+//     start++;
+//     end--;
+//   }
+//   return str.join("");
+// }
+
+// let numbers = [1, 2, 3, 4, 4, 9, 56, 90],
+//   target = 8;
+// function InputSum(nums, target) {
+//   let l = 0,
+//     r = nums.length - 1;
+//   while (l <= r) {
+//     if (nums[l] + nums[r] === target) return [l + 1, r + 1];
+//     if (nums[l] + nums[r] < target) l++;
+//     if (nums[l] + nums[r] > target) r--;
+//   }
+//   let first = 0;
+//   let second = 1;
+//   while (first !== nums.length - 1) {
+//     if (first === second) {
+//       second++;
+//     }
+//     if (nums[first] + nums[second] == tar) {
+//       return [first + 1, second + 1];
+//     }
+//     if (second == nums.length) {
+//       second = 0;
+//       first++;
+//     }
+//     second++;
+//   }
+//   return
+// }
+// console.log(InputSum(numbers, target));
+
+// Squares of a Sorted Array
+// let nums = [-4, -1, 0, 3, 10];
+// function Test(arr) {
+//   let newArr = new Array(arr.length).fill(0);
+//   let left = 0;
+//   let right = arr.length - 1;
+//   let index = arr.length - 1;
+//   while (left <= right) {
+//     let powerLeft = Math.pow(arr[left],2);
+//     let powerRight = Math.pow(arr[right],2);
+//     if (powerLeft > powerRight) {
+//       newArr[index] = powerLeft;
+//       left++;
+//       index--;
+//     } else {
+//       newArr[index] = powerRight;
+//       right--;
+//       index--;
+//     }
+//   }
+//   return newArr
+// }
+// console.log(Test(nums))
+
+// let nums = [1,2,3,4,5,6,7]
+//   k = 3;
+// function Test(nums, k) {
+//     let timesOfRotation = k % nums.length;
+//     console.log(nums.splice(-timesOfRotation))
+//     nums.unshift(...nums.splice(-timesOfRotation));
+//     return nums;
+// }
+// console.log(Test(nums, k));
+
+// let s1 = "ab", s2 = "eidbaooo"
+// function Test(str1,str2){
+//    let s1 =  str1.split("")
+//   let s2 =  str2.split("")
+//   console.log(s1,s2)
+// }
+// Test(s1,s2)
+
+// max sum in array
+
+// let arr = [-2, 1, -3, 4, -1, 2, 1, -5, 4];
+// function Test(nums) {
+//   let sum = nums[0];
+//   for (let i = 1; i < nums.length; i++) {
+//     nums[i] = Math.max(nums[i],nums[i] + nums[i-1])
+//     sum = Math.max(sum,nums[i])
+//   }
+//   return sum
+// }
+// Test(arr);
+
+// let nums = [3, 2, 4],
+//   target = 6;
+// function Test(nums, target) {
+//     for (let i = 0; i < arr.length; i++) {
+//       for (let j = i + 1; j < arr.length; j++) {
+//         if (arr[i] + arr[j] === tar) {
+//           return [i, j];
+//         }
+//       }
+//     }
+//   let hash = {};
+//   for (var i = 0; i < nums.length; i++) {
+//     let diff = target - nums[i];
+//     if (hash[diff] !== undefined) {
+//       return [hash[diff], i];
+//     }
+//     hash[nums[i]] = i;
+//   }
+// }
+// console.log(Test(nums, target))
+
+// let string = "abaaba";
+// function Test(str) {
+//   let temp = str.split("");
+//   let hash = new Map();
+//   let arr = [...Array(26)].map((_, i) => String.fromCharCode(i + 97));
+//   for (let item in arr) {
+//     hash[arr[item]] = 0;
+//     hash[temp[item]] = hash[temp[item]] + 1;
+//   }
+//   console.log(hash);
+// }
+// Test(string);
+
+// const arr = [15, 23, 19, 20, 7];
+// let max = 0;
+// let maxe;
+// function findKthMaxElement(arr, k) {
+//   maxe = Math.max.apply(null, arr);
+//   arr.splice(arr.indexOf(maxe), 1);
+//   max++;
+//   while (max !== k) {
+//     findKthMaxElement(arr, k);
+//   }
+//   return maxe;
+// }
+// let element = findKthMaxElement(arr, 4);
+// console.log(element);
+
+// Array.prototype.myIndexof = function (num) {
+//   let index = false;
+//   for (i = 0; i < this.length; i++) {
+//     if (this[i] == num) {
+//       index = i;
+//       break;
+//     }
+//   }
+//   return index;
+// };
+// console.log(arr.myIndexof(7));
+
+// const arr = [15, 23, 19, 20, 7];
+// let count = 0;
+// let maxElement = 0;
+// function findKthMaxElement(arr, k) {
+//   let max = 0;
+//   let maxIndex = 0;
+//   for (i = 0; i < arr.length; i++) {
+//     if (arr[i] >= max) {
+//       max = arr[i];
+//       maxIndex = i;
+//     }
+//   }
+//   [arr[maxIndex], arr[arr.length - 1]] = [arr[arr.length - 1], arr[maxIndex]];
+//   maxElement = arr.pop();
+//   count++;
+//   while (count !== k) {
+//     findKthMaxElement(arr, k);
+//   }
+// }
+// let element = findKthMaxElement(arr, 2);
+// console.log(maxElement);
+
+// let nums = [1011, 1100, 001, 01, 120, 4350, 3400];
+// function removeZero(arr) {
+//   arr.map((i) => {
+//     i.toString().replace(/0/g, "");
+//   });
+//   return arr;
+// }
+// console.log(removeZero(nums));
