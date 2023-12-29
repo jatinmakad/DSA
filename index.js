@@ -87,6 +87,7 @@
 // });
 
 // polyfill for find function
+
 // Array.prototype.myMap = function (callback) {
 //   let temp = [];
 //   for (i = 0; i < this.length; i++) {

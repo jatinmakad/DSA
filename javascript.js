@@ -1255,3 +1255,118 @@
 // console.log(solution(nums, target))
 
 
+
+
+// Next js -----
+
+// The React Framework for Production
+
+// React
+
+// Not quite possible to build a full feature rich application ready to be deployed for production
+// React is a library for building user interfaces
+// You have to make decisions on other features of the app like routing, styling, authentication etc.
+
+// Next.js
+// A package that uses React for building user interfaces
+// Loaded with a lot more features that enable you to build full fledged production ready applications.
+// Features exactly like routing, styling, authentication, bundle optimization etc.
+// There's no need to install additional packages. Next.js provides everything for you
+// Opinions and conventions need to be followed to implement the above said features
+
+// .next folder for deployment
+
+// in Nextjs index file is generated while rendering but it's not present in public folder
+
+// react hydration
+
+// React vs Next JS
+// By default, Next JS pre-renders every page in the application
+// What does pre-render mean?
+// Next JS generates HTML for each page in advance instead of having it all done by client-side
+
+// Why pre-render?
+// 1. Pre-rendering improves performance
+// • In a React app, you need to wait for the JavaScript to be executed
+// Perhaps fetch data from an external API and then render the UI
+// There is a wait time for the user
+// • With a pre-rendered page, the HTML is already generated and loads faster
+
+// 2. Pre-rendering helps with SEO
+
+// If you're building a blog or an e-commerce site, SEO is a concern
+// With a React app, if the search engine hits your page, it only sees a div tag with id equal to root
+// • If search engine hits a pre-rendered page though, all the content is present in the source code which
+// will help index that page If SEO is of concern for your app, pre-rendering is what you want
+
+// Pre-rendering Summary
+// Pre-rendering refers to the process of generating HTML with the necessary data for a page in our
+// application.
+// Pre-rendering can result in better performance and SEO.
+
+// Static Generation - How?
+// Next JS, by default will pre-render every page in our app
+// The HTML for every page will automatically be statically generated when we build our application
+// "Throughout this video, you've been mentioning that pages are generated at build time. But there
+// is no build for application yet, is there? Aren't we running the application in development mode?"
+// Prod Server - An optimized build is created once and you deploy that build. You don't make code
+// changes on the go once it is deployed
+// Dev Server - We should be able to make changes in our code and we want that code to immediately
+// reflect in the browser
+
+// Next.js is a React-based open-source framework that helps developers build server-side rendered React applications.
+
+// Next.js offers several advantages over React, including server-side rendering, automatic
+// code splitting, static site generation, dynamic imports, optimized performance, and easy
+// deployment. Additionally, Next.js supports built-in SEO and analytics, making it easier to
+//  optimize your application for search engines and track user engagement.
+
+// Server-side rendering (SSR) is the process of rendering a web page on the server before sending it to the client's browser. SSR is important because it allows search engines to crawl and index your website's content, which can improve your website's SEO. Additionally, SSR can improve the initial page load time and improve the user experience for users with slow internet connections or devices.
+
+// The getStaticProps function is used to fetch data at build time for static site generation
+
+// compose ---
+// Function composition is a way of chaining multiple functions to create a new function. It is a way of solving a problem by reducing it into smaller solutions. As we see function composition happens from right to left.
+
+// const multiplyby2 = (n) => {
+//   return n * 2;
+// };
+// const positiveNumber = (n) => {
+//   return Math.abs(n);
+// };
+// const compose = (fn1, fn2) => (data) => {
+//   return fn1(fn2(data));
+// };
+// const result = compose(multiplyby2, positiveNumber);
+// console.log(result(-20));
+
+
+// Implement Retry API with n number of ----
+
+// const promise = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     reject("Failed");
+//   }, 2000);
+// });
+// const wait = ms => new Promise((resolve) => {
+//     setTimeout(() => resolve(), ms);
+//   });
+// const retry = (func, retries, delay, finalError) => {
+//   return func
+//     .then()
+//     .catch((res) => {
+//       if (retries > 0) {
+//         return wait(delay).then(retry(promise, retries - 1, delay, finalError));
+//       }
+//     });
+// };
+// retry(promise, (retries = 3), (delay = 50), (finalError = "Failed"));
+
+
+// Prototype Inheritance ----
+// The answer is that these methods come built-in within each type of data structure thanks to something called prototype inheritance.
+// In JavaScript, an object can inherit properties of another object. The object from where the properties are inherited is called the prototype.
+//  In short, objects can inherit properties from other objects — the prototypes
+
+// let arr = ['first','second']
+// console.log(arr.__proto__)
