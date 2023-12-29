@@ -1,9 +1,9 @@
 // javascript is sync & single threaded language
-// js is weeakly typed language it does'nt attachs its vairalbe to specific data type, it means later on the program i can assing obj , boolen or array to vairables in it.
+// js is weeakly typed language it does'nt attach its vairalbe to specific data type, it means later on the program i can assing obj , boolen or array to vairables in it.
 
 //  1. Global Execution Context
 
-// js scims throungh the program
+//  js scims throungh the program
 //  Memory creation in first phase it allocate memory to vairables and functions and then execute.
 //  allocate special memory as undefined
 
@@ -25,7 +25,7 @@
 // window is global object created by javascript engine at global context.
 
 // 4. scope
-// let and const store value in seprate memory space then var.
+// let and const store value in seprate memory space then var. user can't access this varibale before initializing memory to it
 // temporal dead zone -  time when let and const varible from hosted to assign value.
 // the area of a block where a variable is inaccessible until the moment the computer completely initializes it with a value.
 
@@ -68,3 +68,27 @@
 //   console.log("Namaste Javascript");
 // }
 // x();
+
+
+
+// function statement aka function declaration 
+// this way of creating functiong is called function statement
+// function a(){
+// }
+
+// function expression 
+// assign function to variable
+// var b = function(){
+// }
+
+// major difference between statment and expression is hoisting
+
+// argument is a varibale pass to function and paramenter is identifer to a function
+// ability of function to pass a function as argument is called first class function 
+
+
+
+
+
+
+

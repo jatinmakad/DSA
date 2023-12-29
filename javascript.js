@@ -21,22 +21,6 @@
 //     console.log(res,req)
 // })
 
-// Global execution context GEC
-// every thing happens in js in execution context
-// JIT just in time
-
-// memory creation phase and then code execution phase
-// at frist js scims through the code and allocate memory to the variable and function
-// code execution phase
-// every function has its own execution context and two phases
-// call stack maintain the order of execution of execution context
-// memory - this is a variable component where variable and function stored ass a key value pair
-//  Memory   |   Code  (thread of execution)
-// js is losially type langauage
-// temporal dead zone
-// let and const declaration are alse hoisted but they behave very differently than var
-// block scope is a compound statement and group multiple statements
-
 // shallow copy vs deep copy
 
 // hoisting
@@ -166,7 +150,15 @@
 
 // A callback function is passed as an argument to another function whereas Promise is something that is achieved or completed in the future.
 
-// AJAX and fetch
+// Curring --  transforms a function with multiple arguments into a nested series of functions, each taking a single argument.
+// function temp(a){
+//     return function(b){
+//         return function(c){
+//             return a+b+c
+//         }
+//     }
+// }
+// console.log(temp(2)(2)(2))
 
 // function add(a, b) {
 //   this.a = a;
@@ -517,13 +509,12 @@
 // temp.middleLinkedList()
 // console.log(temp);
 
-
 // let nums = [3,1,2]
 // function Subsequence(arr){
 //   let n = arr.length
 //   function fun(index,temp = []){
 //     if(index >= n){
-//       return 
+//       return
 //     }
 //     temp.push(arr[index])
 //     fun(index+1,temp)
@@ -533,3 +524,734 @@
 //   console.log(fun(0,[]))
 // }
 // console.log(Subsequence(nums))
+
+// Var / Let / Const
+
+// console.log(a)
+// var a = 20
+
+// Sum of number in string
+// function str(str){
+//   let count = 0;
+//   for(let i = 0;i<str.length;i++){
+//      if(!isNaN(str[i])){
+//         count = Number(count) + Number(str[i])
+//      }
+//   }
+//   console.log(count)
+// }
+// console.log(str('ljashdl4sad544asdas44asd878asdsd454asdsdsd1122'))
+
+// var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// output  [[1,2],[3,4],[5,6],[7,8],[9]]
+// let result = []
+// function fun(arr, size, start, end) {
+//   if (arr.length <= size) {
+//     console.log(result)
+//     result.push(arr);
+//     return;
+//   } else {
+//     result.push(arr.slice(start, end));
+//     fun(arr.slice(end, arr.length), size, start, end);
+//   }
+// }
+// console.log(fun(arr, 4, 0, 4));
+
+// Pending ----
+// const sort = arr => {
+//   if (arr.length < 2) return arr;
+//   let first = arr[0];
+//   let left = [];
+//   let right = [];
+//   for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] < first)
+// 		left.push(arr[i]);
+//     else
+// 		right.push(arr[i]);
+//   };
+//   return [
+//     ...sort(left),
+//     first,
+//     ...sort(right)
+//   ];
+// };
+// let out = sort([14,15,17,16,18,19,20,9,10,11,12,13,0,1,2,3,4,5,6,7,8]);
+// console.log(out)
+
+// shift an array 500 times
+// let arr = [1, 2, 3, 4, 5, 6, 7, 8];
+// for (let i = 0; i < 500 % arr.length; i++) {
+//   let once = arr.splice(0, 1);
+//   arr = [...arr, ...once];
+// }
+// console.log(arr);
+
+//Missing Number
+// function MissingNumber(arr){
+//  let num= arr.reduce((pop,val) => {
+//    return pop += val
+//   },0)
+//   let n = arr.length
+//   var expected = n*(n+1)/2;
+//   return expected - num
+// }
+// console.log(MissingNumber([3,0,1]))
+
+// function SortColors(arr){
+//   let first = 0
+//   let last = arr.length - 1
+//     for(let i =0 ; i <= last;){
+//     if(arr[i] == 2){
+//      [arr[i],arr[last]] = [arr[last],arr[i]]
+//       last--
+//     } else if (arr[i] == 0){
+//      [arr[i],arr[first]] = [arr[first],arr[i]]
+//       i++
+//       first++
+//     } else {
+//       i++
+//     }
+//   }
+//   return arr
+// }
+// console.log(SortColors([2,0,2,1,1,0]))
+
+// Find First and Last Position of Element in Sorted Array
+// let nums = [5, 7, 7, 8, 8, 10], target = 8
+// function SearchFirstandLast(nums, target) {
+//    let left = 0
+//    let right = nums.length
+//    while(left !== right){
+//     if(nums[left] !== target){
+//       left++
+//     } else if(nums[right] !== target) {
+//       right--
+//     } else if (nums[left] == target && nums[right] == target){
+//       return [left,right]
+//     }
+//    }
+// }
+// console.log(SearchFirstandLast(nums,target))
+
+// function SortByFrequency(str) {
+//   let obj = {};
+//   for (let i = 0; i < str.length; i++) {
+//     obj[str[i]] = (obj[str[i]] || 0) + 1;
+//   }
+//   let temp = Object.entries(obj).sort((a, b) => {
+//     return b[1] - a[1];
+//   });
+//   let result = "";
+//   for (let i = 0; i < temp.length; i++) {
+//     let count = 0;
+//     while (count !== temp[i][1]) {
+//       result += temp[i][0];
+//       count++;
+//     }
+//     count = 0;
+//   }
+//   return result;
+// }
+// console.log(SortByFrequency("treee"));
+
+// 1. hollow square
+
+// *****
+// *   *
+// *   *
+// *   *
+// *****
+
+// let n = 5;
+// let str = "";
+// for (let i = 0; i < n; i++) {
+//   if (i == 0 || i == n - 1) {
+//     for (let j = 0; j < n; j++) {
+//       str += "*";
+//     }
+//   } else {
+//     for (let j = 0; j < n; j++) {
+//       if(j == 0){
+//         str += '*'
+//       } else if (j == n - 1){
+//         str += '*'
+//       } else {
+//         str += ' '
+//       }
+//     }
+//   }
+//   str += '\n'
+// }
+// console.log(str);
+
+// let array = ['a','b']
+// let newArray = [1,2,3]
+// array.push.apply(array,newArray)
+// console.log(array)
+
+// find min and max
+// let num = [1,2,34,5,6,7,3,4,23]
+// console.log(Math.max.apply(null,num))
+
+// let arrayIntegersOriginal3 = [1, 2, 3, 4, 5];
+// let arrayIntegers3 = arrayIntegersOriginal3.splice(3, 0, "a", "b", "c");
+// splice(start, deleteCount, item1, item2)
+
+// Global execution context GEC
+// every thing happens in js in execution context
+// JIT just in time
+
+// memory creation phase and then code execution phase
+// at frist js scims through the code and allocate memory to the variable and function
+// code execution phase
+// every function has its own execution context and two phases
+// call stack maintain the order of execution of execution context
+// memory - this is a variable component where variable and function stored ass a key value pair
+//  Memory   |   Code  (thread of execution)
+// js is losially type langauage
+// temporal dead zone
+// let and const declaration are alse hoisted but they behave very differently than var
+// block scope is a compound statement and group multiple statements
+
+// In Javascript, functions are first class objects. First-class functions means when functions in that language are treated like any other variable.
+// For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable. For example, in the below example, handler functions assigned to a listener
+
+// A first-order function is a function that doesn’t accept another function as an argument and doesn’t return a function as its return value.
+
+// A higher-order function is a function that accepts another function as an argument or returns a function as a return value or both.
+
+// Pure function is a function where the return value is only determined by its arguments without any side effects.
+
+// The isNaN() function is used to determine whether a value is an illegal number (Not-a-Number) or not. i.e, This function returns true if the value equates to NaN. Otherwise it returns false.
+
+// JavaScript is an interpreted language, not a compiled language. An interpreter in the browser reads over the JavaScript code, interprets each line, and runs it. Nowadays modern browsers use a technology known as Just-In-Time (JIT) compilation, which compiles JavaScript to executable bytecode just as it is about to run.
+
+// The preventDefault() method cancels the event if it is cancelable, meaning that the default action or behaviour that belongs to the event will not occur
+
+// The stopPropagation method is used to stop the event from bubbling up the event chain
+
+// Class is a blueprint of a real-life entity. It describes how the object will look alike, what characteristics it holds and what kind of actions we can perform on it.
+
+// A promise is an object that may produce a single value some time in the future with either a resolved value or a reason that it’s not resolved(for example, network error). It will be in one of the 3 possible states: fulfilled, rejected, or pending.
+
+// Currying is the process of taking a function with multiple arguments and turning it into a sequence of functions each with only a single argument.
+
+// Call: The call() method invokes a function with a given this value and arguments provided one by one
+
+// var employee1 = { firstName: "John", lastName: "Rodson" };
+// var employee2 = { firstName: "Jimmy", lastName: "Baily" };
+
+// function invite(greeting1, greeting2) {
+//   console.log(
+//     greeting1 + " " + this.firstName + " " + this.lastName + ", " + greeting2
+//   );
+// }
+
+//invite.call(employee1, "Hello", "How are you?"); // Hello John Rodson, How are you?
+//invite.call(employee2, "Hello", "How are you?"); // Hello Jimmy Baily, How are you?
+
+// Apply: Invokes the function with a given this value and allows you to pass in arguments as an array
+// bind: returns a new function, allowing you to pass any number of arguments
+
+// The slice() method returns the selected elements in an array as a new array object.
+
+// Splice method modifies the original array and returns the deleted array.
+// The splice() method is used either adds/removes items to/from an array, and then returns the removed item.
+// let arrayIntegersOriginal3 = [1, 2, 3, 4, 5];
+// let arrayIntegers3 = arrayIntegersOriginal3.splice(3, 1, "a", "b", "c"); //returns [4]; original array: [1, 2, 3, "a", "b", "c", 5]
+
+// lambda or arrow functions - An arrow function is a shorter syntax for a function expression and does not have its own this
+
+// first class function - In Javascript, functions are first class objects. First-class functions means when functions in that language are treated like any other variable.
+
+// first order function - A first-order function is a function that doesn’t accept another function as an argument and doesn’t return a function as its return value.
+
+// higher order function - A higher-order function is a function that accepts another function as an argument or returns a function as a return value or both.
+
+// Curring - Currying is the process of taking a function with multiple arguments and turning it into a sequence of functions each with only a single argument.
+
+// Pure function is a function where the return value is only determined by its arguments without any side effects.
+
+// let is Hoisted but not initialized
+
+// The Temporal Dead Zone is a behavior in JavaScript that occurs when declaring a variable with the let and const keywords, but not with var. In ECMAScript 6, accessing a let or const variable before its declaration (within its scope) causes a ReferenceError.
+// The time span when that happens, between the creation of a variable’s binding and its declaration, is called the temporal dead zone.
+
+// Hoisting is a JavaScript mechanism where variables, function declarations and classes are moved to the top of their scope before code execution.
+// Remember that JavaScript only hoists declarations, not initialisation.
+
+// In ES6, Javascript classes are primarily syntactic sugar over JavaScript’s existing prototype-based inheritance.
+
+// A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers that do not natively support it.
+
+// inheritance refers to passing down characteristics from a parent to a child so that a new piece of code can reuse and build upon the features of an existing one.
+
+// Variable shadowing occurs when an inner scope declares a variable with the same name as an outer scope.
+
+// A closure is the combination of a function and the lexical environment within which that function was declared.
+// i.e, It is an inner function that has access to the outer or enclosing function’s variables.
+
+// Promise -- Promise is a Javascript object that represents the eventual completion(or failure) of an asynchronous operation and its resulting value.
+// It allows you to handle async operations in a more elegant way and avoid callback hell problem.
+
+// Asyn & Await --- Async/await is a more recent addition to JavaScript, and it’s built on top of Promises. It allows you to write asynchronous code that looks and behaves like synchronous code,
+// using the keywords “async” and “await”. The “async” keyword is used to define an async function, and the “await” keyword is used to pause the execution of an async function until a promise is resolved.
+
+// The callbacks are needed because javascript is an event driven language. That means instead of waiting for a response javascript will keep executing while listening for other events
+
+// In summary, promises, callbacks, and async/await are all ways to handle asynchronous operations in JavaScript, with promises providing a more elegant way of handling async operations, callbacks being a more traditional way, and async/await providing a more convenient and readable way of handling async operations.
+
+// In JavaScript, null is a special value that represents an empty or unknown value.
+
+// Prototypes are the mechanism by which JavaScript objects inherit features from one another.
+// “This” keyword refers to an object that is executing the current piece of code.
+
+// Promise  - asyn and await
+
+// let p = new Promise((res, rej) => {
+//   setTimeout(() => {
+//   res("promis 1");
+//   },5000)
+// });
+// let p2 = new Promise((res, rej) => {
+//   setTimeout(() => {
+//   rej("promis 2");
+//   },10000)
+// });
+// async function getData(){
+//     console.log('working')
+//     let res = p
+//     res.then((res) => console.log(res,'ress'))
+//     console.log('last')
+
+//     console.log('working')
+//     const val2 = await p2
+//     console.log(val2,'val')
+//     const val = await p
+//     console.log(val,'val')
+// }
+// getData()
+
+// Promie All
+
+// let p = new Promise((res, rej) => {
+//     setTimeout(() => {
+//     res("promis 1");
+//     },1000)
+//   });
+//   let p2 = new Promise((res, rej) => {
+//     setTimeout(() => {
+//     res("promis 2");
+//     },5000)
+//   });
+// Promise.all([p, p2]).then((res) => console.log(res,"res")).catch((err) => console.log(err, "err"));
+// Promise.allSettled([p,p2]).then((res) => console.log(res,'res')).catch((err) => console.log(err,'err'))
+
+// Promise PolyFill
+// function PromisPolyFill(executer) {
+//   let onResolve,
+//     onReject,
+//     isFullfilled = false,
+//     isRejected = false,
+//     isCalled = false,
+//     value;
+
+//   function resolve(val) {
+//     isFullfilled = true;
+//     value = val;
+//     if (typeof onResolve == "function") {
+//       onResolve(val);
+//       isCalled = true;
+//     }
+//   }
+//   function reject(val) {
+//     isRejected = true;
+//     value = val;
+//     if (typeof onReject == "function") {
+//       onReject(val);
+//       isCalled = true;
+//     }
+//   }
+//   this.then = function (callback) {
+//     onResolve = callback;
+//     if (isFullfilled && !isCalled) {
+//       isCalled = true;
+//       onResolve(value);
+//     }
+//     return this;
+//   };
+//   this.catch = function (callback) {
+//     onReject = callback;
+//     if (isRejected && !isCalled) {
+//       isCalled = true;
+//       onReject(value);
+//     }
+//     return this;
+//   };
+//   executer(resolve, reject);
+// }
+// new PromisPolyFill((resolve, reject) => {
+//   reject("hello");
+// })
+//   .then((res) => console.log(res, "res"))
+//   .catch((err) => console.log(err, "err"));
+
+// Memoization -- Memoization is a powerful optimization technique used in computer programming to speed up the execution of functions by caching their results.
+// function add(n) {
+//   let result = 0;
+//   for (let i = 0; i < n; i++) {
+//     result = result + i;
+//   }
+//   return result;
+// }
+// function memoization(func) {
+//   let cahce = {};
+//   return function (...args) {
+//     let n = args[0];
+//     if (n in cahce) {
+//       console.log('cahce')
+//       return cahce[n];
+//     } else {
+//       let result = func(n);
+//       cahce[n] = result;
+//       console.log('func')
+//       return result;
+//     }
+//   };
+// }
+// let result = memoization(add);
+// result(10);
+// result(12);
+// result(10);
+
+// Debounce ---- Debounce function limits the execution of a function call and waits for a certain amount of time before running it again.
+// function getData(event) {
+//   console.log(event, "event");
+// }
+// function useDebounce(call, d) {
+//   let timer;
+//   return function (...args) {
+//     clearTimeout(timer);
+//     timer = setTimeout(() => {
+//       call(args[0]);
+//     }, d);
+//   };
+// }
+// const Debounce = useDebounce(getData, 1000);
+
+// Throttling ---- Throttling is a technique, to limit the execution of an event handler function, even when this event triggers continuously due to user actions. (ex: browser resizing)
+
+// event bubling - When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
+
+// event capture - an event propagates from the outermost element to the target element
+
+// clouser - A closure consists of references to the surrounding
+// state (the lexical environment) and a function that
+// has been wrapped (contained). In other words, a
+// closure enables inner functions to access the scope
+// of an outside function. Closures are formed whenever
+// a function is created in JavaScript, during function
+// creation time.
+
+// synthetic event - SyntheticEvent is a wrapper based on the browser’s native events.
+// It provides an unified API, prevents browser inconsistencies, and ensures that the event works across multiple platforms.
+
+//  Controlled components refer to the components where the state and behaviors are controlled by Parent components while
+//  Uncontrolled components are the ones having control of their own state and manage the behaviors on themselves
+
+// A call stack is a way for the JavaScript engine to keep track of its place in code that calls multiple functions.
+
+// JavaScript has a runtime model based on an event loop, which is responsible for executing the code, collecting and processing events, and executing queued sub-tasks.
+
+// Data type determines type of varibale
+
+// primitive and non - primitive data type
+//  hold single value , hold multiple value
+//  immutable means value once assign cannot be changed , mutable and their values can be changes
+
+// spread operator is used to expand or spread elements from an iterable array , object and string into individual elements
+// rest operator is used in function parameter to collect all remanning elements
+
+// Pure function is a function which return same output for same input
+
+// Event handling is proccess of responding to user action in web page
+// Events are signals fired inside the browser window that notify of changes in the browser or operating system environment.
+// Programmers can create event handler code that will run when an event fires, allowing web pages to respond appropriately to change.
+
+// pending -- fetch
+
+// React ----
+
+// Lack of Proper Documentation
+// Development Speed
+// JSX Complexity
+// Problems With SEO
+// we have to import library to perform some specific actions
+
+// A single-page application is a web application or website that interacts with the user by dynamically rewriting the current web page with new data from the web server, instead of the default
+//  method of a web browser loading entire new pages
+
+// In React, components have a lifecycle that consists of different phases. Each phase has a set of lifecycle methods that are called at specific points in the component's lifecycle.
+// These methods allow you to control the component's behavior and perform specific actions at different stages of its lifecycle.
+// The Mounting Phase begins when a component is first created and inserted into the DOM. The Updating Phase occurs when a component's state or props change.
+// And the Unmounting Phase occurs when a component is removed from the DOM
+
+// If you try to update the state directly then it won't re-render the component.
+
+// SyntheticEvent is a wrapper based on the browser’s native events.
+// It provides an unified API, prevents browser inconsistencies, and ensures that the event works across multiple platforms.
+// Synthetic Events allows events in React to easily adapt to different browsers, solving an issue that has caused unnecessary frustration for developers.
+
+// The ref is used to return a reference to the element. They should be avoided in most cases, however, they can be useful when you need a direct access to the DOM element or an instance of a component.
+
+// React Fiber
+
+// Fiber is the new reconciliation engine or reimplementation of core algorithm in React v16. The goal of React Fiber is to increase its suitability for areas like animation,
+// layout, gestures, ability to pause, abort, or reuse work and assign priority to different types of updates; and new concurrency primitives
+
+// React 18+
+// useTransition - Marking a state update as a non-blocking transition
+// Concurrency - It allows React to work on multiple tasks at once, without blocking the main thread
+// State batching groups together multiple state updates into a single re-render for better performance.
+// Suspense - a new way of building React apps using the concurrent rendering engine introduced in React 18. It's also a specific React API, <Suspense /> , a component that lets you display a fallback until its children have finished loading.
+// Transitions let you keep the user interface updates responsive even on slow devices.
+// The useDeferredValue hook allows us to fix this slow render problem by implementing a delay before some information is calculated.
+
+// React Reconciliation is the process through which React updates the Browser DOM. It makes the DOM updates faster in React.
+// It updates the virtual DOM first and then uses the diffing algorithm to make efficient and optimized updates in the Real DOM
+
+// Profiler - lets you measure rendering performance of a React tree programmatically.
+
+// Suspense -  lets you display a fallback until its children have finished loading.
+
+// memo - lets you skip re-rendering a component when its props are unchanged.
+
+// Babel is a JavaScript compiler that converts modern JavaScript code into a version compatible with all browsers
+
+// Controlled components refer to the components where the state and behaviors are controlled by Parent components while
+// Uncontrolled components are the ones having control of their own state and manage the behaviors on themselves.
+// The Uncontrolled Components are the ones that store their own state internally, and you query the DOM using a ref to find its current value when you need it.
+
+// Redux is an open-source JavaScript library used to manage application state.
+// Redux helps apps to scale by providing a sensible way to manage state through a unidirectional data flow model
+
+// Redux Principle ---
+// Single source of truth​ The global state of your application is stored in an object tree within a single store. ...
+// State is read-only​ The only way to change the state is to emit an action, an object describing what happened. ...
+// Changes are made with pure functions​
+
+// Reducers, as the name suggests, take in two things: previous state and an action. Then they reduce it (read it return) to one entity: the new updated instance of state.
+// So reducers are basically pure JS functions which take in the previous state and an action and return the newly updated state.
+
+// In Redux, reducers are pure functions that handle state logic,
+// accepting the initial state and action type to update and return the state, facilitating changes in React view components
+
+// Redux middleware provides a third-party extension point between dispatching an action, and the moment it reaches the reducer.
+// People use Redux middleware for logging, crash reporting, talking to an asynchronous API, routing, and more
+
+// Redux Thunk is middleware that allows you to return functions,
+// rather than just actions, within Redux. This allows for delayed actions, including working with promises
+
+// Redux Thunk middleware allows you to write action creators that return a function instead of an action
+
+// constructors are mainly used for two purposes: It used for initializing the local state of the component by assigning an object to this
+
+// Higher-order components (HOCs) are a powerful feature of the React library. They allow you to reuse component logic across multiple components.
+// In React, a higher-order component is a function that takes a component as an argument and returns a new component that wraps the original component
+
+// A component's lifecycle has three main phases: the Mounting Phase, the Updating Phase, and the Unmounting Phase.
+
+// React Router - it enables the creation of single-page web or mobile apps that allow navigating without refreshing the page. It also allows us to use browser history features while preserving the right application view.
+
+// React 18 features imp.
+// HOC
+
+// var a = 10
+// {
+//     var a = -10
+// }
+// let b = a
+// {
+//     let b = -20
+// }
+// console.log(b,'aaa')
+
+// b = 20
+// let b
+// console.log(b,'bbb')
+
+// a = 20
+// var a;
+// console.log(a)
+
+// debounce function
+
+// function getData(value) {
+//   console.log(value);
+// }
+// function debounce(func, d) {
+//   let timer;
+//   return function (...args) {
+//     clearTimeout(timer);
+//     timer = setTimeout(() => {
+//       func(args[0]);
+//     }, d);
+//   };
+// }
+// const Debounce = debounce(getData, 2000);
+// Debounce();
+
+// throtlling
+// document.getElementById('button1').addEventListener('click',(e) => {
+//     dobunceFunc(10)
+// })
+// function getData(value) {
+//   console.log("data", value);
+// }
+// function debounce(func, d) {
+//   let timer;
+//   return function (...args) {
+//     clearTimeout(timer);
+//     timer = setTimeout(() => {
+//       func(args[0]);
+//     }, d);
+//   };
+// }
+// const dobunceFunc = debounce(getData, 2000);
+// dobunceFunc(10);
+
+// memoization
+
+// function getData(n){
+//     let result = 0
+//     for(let i =0;i<n;i++){
+//         result++
+//     }
+//     return result
+// }
+// function memoization(call){
+//     let cahces = {}
+//    return function(...args){
+//     let n = args[0]
+//     if(n in cahces){
+//         console.log('cache')
+//         return cahces[n]
+//     } else {
+//         console.log('new')
+//         let result = call(n)
+//         cahces[n] = result
+//         return result
+//     }
+//    }
+// }
+// let memo = memoization(getData)
+// memo(10)
+// memo(20)
+// memo(10)
+
+// Array.prototype.myReduce = function (call, i) {
+//   let result = i;
+//   for (let i = 0; i < this.length; i++) {
+//     if (result !== undefined) {
+//       result = call(result, this[i], i, this);
+//     } else {
+//       result = this[i];
+//     }
+//   }
+//   return result;
+// };
+
+// let result = [1, 2, 3].myReduce((acc, inc) => {
+//   return acc * inc;
+// }, 1);
+// console.log(
+//   result,
+//   [1, 2, 3].reduce((acc, inc) => {
+//     return acc * inc;
+//   }, 1)
+// );
+
+// var a = 10;
+// if (true) {
+//   let a = 20;
+//   console.log(a, "inner");
+// }
+// console.log(a, "outer");
+
+// my name is jatin makad and I have completed my bachelor of engineering in computer science from LPU and I have spent 2.3 years working as a software developer
+// and I have had the opportunity to work on various projects and with different technologies, from developing web applications leading a front end of the project
+// in my previous role at octal It solution. I am known for my problem-solving skills and ability to work collaboratively with cross-functional teams.
+
+// we have not used SSR in this cause the only object is to make SEO frienldy and that's it
+//  Next. js provides a custom head component for setting up head metadata
+
+// I worked with 6 personal teams (4 developers, 1BA, 1PM) on the Mada properties website, and the main objective of this website is to list properties for customers
+// published by agents or companies that basically worked in UAE and Saudi region my main role was to manage and work on front end using a library like next js and
+// react js, in this our main objective to make site SEO friendly that's why we have chosen to work on Next the best part about this project is that I got to learn
+// a lot about Next js, which I was really curious about, we have deployed the first version in 2 months and then continue to improve with feedback by our client
+// and QA team.
+
+// Fancy betting app In this we have a 4 personal team (3 developers and 1 PM), so basically this project consists of full fledge online gaming platform that has casino
+// , multiple sports games, and many other features like listing matches according to their sports type, league and then the user can place a bet on multiple markets
+// for a single match like fancy, Betfair , bookmaker and user can also watch live matches and scoreboard my role in this project is to manage front end for mobile
+// and web responive we have used React js library for front end and worked on new features like working with socket IO for getting odds of matches in real-time
+// constanly updating odds in our site for all markets
+
+// HTML stands for HyperText Markup Language. It is a standard text formatting language used for developing web pages
+
+// !<!DOCTYPE> - this line tells the browser that this piece of coded is HTML5
+
+// Attributes - HTML Elements contain a starting tag, content, and an ending tag
+
+// Tags - HTML tags contain only starting and closing tag
+
+// the elements tell the browser what to display, the attributes define how they will behave.
+// The tags mark the beginning and the end of an element. They may not be necessary for some elements, especially the closing tags
+
+// Voided tags - HTML elements which do not have closing tags or do not need to be closed are Void elements. For Example <br />, <img />, <hr />, etc.
+
+// React maintains two Virtual DOM at each time, one contains the updated Virtual DOM and one which is just the pre-update version of this updated Virtual DOM.
+//  Now it compares the pre-update version with the updated Virtual DOM and figures out what exactly has changed in the DOM like which components have been changed.
+//   This process of comparing the current Virtual DOM tree with the previous one is known as ‘diffing’. Once React finds out what exactly has changed then it updates those objects only, on real DOM.
+
+// React uses something called batch updates to update the real DOM. It just means that the changes to the real DOM are sent in batches instead of sending any
+// update for a single change in the state of a component.
+
+// We have seen that the re-rendering of the UI is the most expensive part and React manages to do this most efficiently by ensuring that the Real DOM
+//  receives batch updates to re-render the UI. This entire process of transforming changes to the real DOM is called Reconciliation.
+
+// Hello, I'm Jatin Makad, a computer science graduate from LPU with a Bachelor's in Engineering. Over the past 2.3 years, I've polished my skills as a software developer,
+// working on diverse projects and technologies. Notably, I led the front-end development at Octal IT Solution, showcasing my problem-solving abilities and collaborative
+// spirit. I'm excited to use what I've learned and my skills to help out in cool projects and work well with teams.
+
+// Kth smallest element in Array
+
+// let nums = [1,2,6,4,5,3] , K = 3
+// function solution(arr,k){
+//   console.log(arr,k)
+//   let temp = nums[0]
+//   for(let i =1;i<arr.length;i++){
+//     if(temp < nums[i]){
+//         temp = nums[i]
+//     }
+//   }
+//   console.log(temp)
+// }
+// solution(nums,K)
+
+
+// let nums = [3, 5, 2, 8, 11],
+//   target = 10;
+// function solution(nums, target) {
+//     let hash = {}
+//     for (var i = 0; i < nums.length; i++) {
+//     let diff = target - nums[i]
+//     if (hash[diff] !== undefined) {
+//         return [hash[diff], i];
+//       }
+//       hash[nums[i]] = i;
+//     }
+// }
+// console.log(solution(nums, target))
+
+
