@@ -1191,6 +1191,14 @@
 // a lot about Next js, which I was really curious about, we have deployed the first version in 2 months and then continue to improve with feedback by our client
 // and QA team.
 
+// I worked with 6 person teams (4 developers, 1BA, 1 PM) on the "Mada properties" website, and the main objective of this website is to list properties for customers
+// published by agents or companies that worked in the UAE and Saudi region and many other features, my main role was to manage and work on the front end using a library like Next JS,
+// React JS, Google Map APIs, and i18next for translation between English and Saudi, our main objective is to make the site SEO friendly which's why we have chosen to work on it Next JS the best part about this project is that I got to learn
+// a lot about Next js, which I was really curious about, we have deployed the first version in 2 months and then continue to improve with feedback from our client
+// and QA team.
+
+// completed my notice period and immediately available
+
 // Fancy betting app In this we have a 4 personal team (3 developers and 1 PM), so basically this project consists of full fledge online gaming platform that has casino
 // , multiple sports games, and many other features like listing matches according to their sports type, league and then the user can place a bet on multiple markets
 // for a single match like fancy, Betfair , bookmaker and user can also watch live matches and scoreboard my role in this project is to manage front end for mobile
@@ -1223,6 +1231,12 @@
 // Hello, I'm Jatin Makad, a computer science graduate from LPU with a Bachelor's in Engineering. Over the past 2.3 years, I've polished my skills as a software developer,
 // working on diverse projects and technologies. Notably, I led the front-end development at Octal IT Solution, showcasing my problem-solving abilities and collaborative
 // spirit. I'm excited to use what I've learned and my skills to help out in cool projects and work well with teams.
+
+
+// 1. class-based components are state-full components and function components are stateless components 
+// 2. class-based components don't need any extra function to manage their component state or to perform any kind of side effect to its component and on the other hand
+//    function-based component it's just a plane js function and if we have to perform some kind of side effect or manage state we need hooks for it which are offered by React itself
+// 3. after the introduction of hooks in React V16 function components are as powerful as class-based components and it's easier to read, write or manage code in function rather than class-based components cause it's more complex to read and write
 
 // Kth smallest element in Array
 
