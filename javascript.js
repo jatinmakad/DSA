@@ -1384,3 +1384,58 @@
 
 // let arr = ['first','second']
 // console.log(arr.__proto__)
+
+
+// infinite curring in js
+
+// function sum(param1) {
+//    return function (param2) {
+//      if (param2 == null) {
+//        console.log(param1);
+//      } else {
+//        return sum(param1 + param2);
+//      }
+//    };
+//  }
+//  sum(6)(4)(6)();
+
+
+// let obj = {
+//    name:'hello',
+//    getName:() => {
+//       console.log(this.name,'====')
+//    },
+//    getNameFunc:function(){
+//       console.log(this.name,'name')
+//    }
+// }
+// obj.getName()
+// obj.getNameFunc()
+// obj.getName.call(obj)
+
+
+
+let obj = {
+   name:"hello"
+}
+let obj2={
+   name:"hello 2",
+   getName:function(temp){
+      console.log(this.name,temp,'name')
+   }
+}
+
+// obj2.getName.apply(obj,['first','seocnd'])
+
+// PollyFill for Call , Apply , Bind
+
+Function.prototype.myCall = function(context,...args) {
+   context.myFn = this;
+   context.myFn(...args);
+}
+
+Function.prototype.myApply = function(context,...args) {
+   context.myFn = this;
+   context.myFn([...args]);
+}
+obj2.getName.apply(obj,['first','seocnd'])
