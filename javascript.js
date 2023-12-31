@@ -1232,8 +1232,7 @@
 // working on diverse projects and technologies. Notably, I led the front-end development at Octal IT Solution, showcasing my problem-solving abilities and collaborative
 // spirit. I'm excited to use what I've learned and my skills to help out in cool projects and work well with teams.
 
-
-// 1. class-based components are state-full components and function components are stateless components 
+// 1. class-based components are state-full components and function components are stateless components
 // 2. class-based components don't need any extra function to manage their component state or to perform any kind of side effect to its component and on the other hand
 //    function-based component it's just a plane js function and if we have to perform some kind of side effect or manage state we need hooks for it which are offered by React itself
 // 3. after the introduction of hooks in React V16 function components are as powerful as class-based components and it's easier to read, write or manage code in function rather than class-based components cause it's more complex to read and write
@@ -1253,7 +1252,6 @@
 // }
 // solution(nums,K)
 
-
 // let nums = [3, 5, 2, 8, 11],
 //   target = 10;
 // function solution(nums, target) {
@@ -1267,9 +1265,6 @@
 //     }
 // }
 // console.log(solution(nums, target))
-
-
-
 
 // Next js -----
 
@@ -1354,7 +1349,6 @@
 // const result = compose(multiplyby2, positiveNumber);
 // console.log(result(-20));
 
-
 // Implement Retry API with n number of ----
 
 // const promise = new Promise((resolve, reject) => {
@@ -1376,7 +1370,6 @@
 // };
 // retry(promise, (retries = 3), (delay = 50), (finalError = "Failed"));
 
-
 // Prototype Inheritance ----
 // The answer is that these methods come built-in within each type of data structure thanks to something called prototype inheritance.
 // In JavaScript, an object can inherit properties of another object. The object from where the properties are inherited is called the prototype.
@@ -1384,7 +1377,6 @@
 
 // let arr = ['first','second']
 // console.log(arr.__proto__)
-
 
 // infinite curring in js
 
@@ -1398,7 +1390,6 @@
 //    };
 //  }
 //  sum(6)(4)(6)();
-
 
 // let obj = {
 //    name:'hello',
@@ -1415,27 +1406,35 @@
 
 
 
-let obj = {
-   name:"hello"
-}
-let obj2={
-   name:"hello 2",
-   getName:function(temp){
-      console.log(this.name,temp,'name')
-   }
-}
-
+// let obj = {
+//   name: "hello",
+// };
+// let obj2 = {
+//   name: "hello 2",
+//   getName: function (temp) {
+//     console.log(this.name, temp, "name");
+//   },
+// };
 // obj2.getName.apply(obj,['first','seocnd'])
+
 
 // PollyFill for Call , Apply , Bind
 
-Function.prototype.myCall = function(context,...args) {
-   context.myFn = this;
-   context.myFn(...args);
-}
+// Function.prototype.myCall = function (context, ...args) {
+//   context.myFn = this;
+//   context.myFn(...args);
+// };
 
-Function.prototype.myApply = function(context,...args) {
-   context.myFn = this;
-   context.myFn([...args]);
-}
-obj2.getName.apply(obj,['first','seocnd'])
+// Function.prototype.myApply = function (context, args) {
+//   context.myFn = this;
+//   context.myFn(...args);
+// };
+
+// Function.prototype.myApply = function (context, ...args) {
+//   context.myFn = this;
+//   return function () {
+//     return context.myFn(...args);
+//   };
+// };
+
+// obj2.getName.apply(obj, ["first", "seocnd"]);
