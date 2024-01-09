@@ -44,6 +44,7 @@ var reverseWords = function (s) {
     if (str[i] != "" && str[i] != " ") s += str[i] + " ";
   return s.trim();
 };
+// console.log(reverseWords("the sky is blue"))
 
 // Summary Ranges
 // Input: nums = [0,1,2,4,5,7]
@@ -85,6 +86,7 @@ var minSubArrayLen = function (target, nums) {
   for (let i = 0; i < nums.length; i++) {
     sum += nums[i];
     while (sum >= target) {
+      console.log(result, i - left + 1);
       result = Math.min(result, i - left + 1);
       sum -= nums[left++];
     }
@@ -270,23 +272,23 @@ var setZeroes = function (matrix) {
 };
 
 // Merge Strings Alternately
-// Input: word1 = "abc", word2 = "pqr"
+// Input: word1 = "abc", word2 = "pqre"
 // Output: "apbqcr"
-var mergeAlternately = function (word1, word2) {
-  let str = [];
-  let left = 0;
-  let length = word1?.length >= word2?.length ? word2?.length : word1?.length;
-  while (left !== length) {
-    str.push(word1[left], word2[left]);
-    left++;
+
+function mergerStr(str1, str2) {
+  let length = Math.max(str1.length, str2.length);
+  let output = "";
+  for (let i = 0; i < length; i++) {
+       if(str1[i] !== undefined && str2[i] == undefined){
+         output += str1[i]
+       } else if (str1[i] == undefined && str2[i] !== undefined){
+        output += str2[i]
+       } else if(str1[i] !== undefined && str2[i] !== undefined){
+        output += str1[i] + str2[i]
+       }
   }
-  if (word1?.length > word2?.length) {
-    str.push(word1.slice(word2?.length, word1?.length));
-  } else if (word1?.length < word2?.length) {
-    str.push(word2.slice(word1?.length, word2?.length));
-  }
-  return str.join("");
-};
+}
+
 
 // Find First and Last Position of Element in Sorted Array
 // Input: nums = [5,7,7,8,8,10], target = 8
@@ -393,45 +395,6 @@ var searchMatrix = function (arr, target) {
   return false;
 };
 
-// Find First and Last Position of Element in Sorted Array
-// Input: nums = [5,7,7,8,8,10], target = 8
-// Output: [3,4]
-
-var searchRange = function (nums, target) {
-  let left = 0;
-  let right = nums.length - 1;
-  let first = null;
-  let last = null;
-  while (left <= right) {
-    let mid = left + Math.floor((right - left) / 2);
-    if (first !== null) {
-      if (nums[left] == target) {
-        first = left;
-        left--;
-      } else if (nums[right] == target) {
-        last = right;
-        right++;
-      } else if (nums[right] !== target && nums[left] !== target) {
-        break;
-      }
-    } else {
-      if (nums[mid] == target) {
-        first = mid;
-        left = mid;
-        right = mid;
-      } else if (nums[mid] > target) {
-        right = mid - 1;
-      } else {
-        left = mid + 1;
-      }
-    }
-  }
-  if (first == null && last == null) {
-    return [-1, -1];
-  } else {
-    return [first, last];
-  }
-};
 
 // Search Insert Position
 // Input: nums = [1,3,5,6], target = 5
@@ -973,16 +936,16 @@ var containsDuplicate = function (nums) {
 
 // Two Number Add
 
-let nums = [2, 7, 11, 15];
-let target = 18;
-let hash = {};
-for (var i = 0; i < nums.length; i++) {
-  let diff = target - nums[i];
-  if (hash[diff] !== undefined) {
-    return [hash[diff], i];
-  }
-  hash[nums[i]] = i;
-}
+// let nums = [2, 7, 11, 15];
+// let target = 18;
+// let hash = {};
+// for (var i = 0; i < nums.length; i++) {
+//   let diff = target - nums[i];
+//   if (hash[diff] !== undefined) {
+//     return [hash[diff], i];
+//   }
+//   hash[nums[i]] = i;
+// }
 
 // polyfill for map function
 
@@ -1020,15 +983,7 @@ Array.prototype.myMap = function (callback) {
   return temp;
 };
 
-// polyfill for reduce function
 
-Array.prototype.myMap = function (callback, val) {
-  let temp = val;
-  for (i = 0; i < this.length; i++) {
-    temp += this[i];
-  }
-  return temp;
-};
 
 // leetcode ----------------------------
 
@@ -1037,7 +992,6 @@ Array.prototype.myMap = function (callback, val) {
 //     nums.unshift(nums[nums.length - 1]);
 //     nums.pop();
 // }
-
 
 // LeeteCode -----------------
 
@@ -1049,7 +1003,6 @@ Array.prototype.myMap = function (callback, val) {
 //     let updated = (head.length - 1) / 2;
 //     console.log(head.slice(updated, head.length + 1));
 // }
-
 
 // string pattern search ------------
 
@@ -1107,7 +1060,6 @@ Array.prototype.myMap = function (callback, val) {
 // }
 // console.log(selectionSort(nums));
 
-
 // leetecode --------------
 
 // let haystack = "hello", needle = "ll"
@@ -1122,8 +1074,6 @@ Array.prototype.myMap = function (callback, val) {
 //   }
 // }
 // console.log(Func(haystack,needle))
-
-
 
 // bubble sort ----
 
@@ -1143,7 +1093,6 @@ Array.prototype.myMap = function (callback, val) {
 //     return arr
 // }
 // console.log(bubbleSort([1,3,1,88,564,12,545,78,22,1,56,43,7,8,2,10,32,2]))
-
 
 // DSA 1. ---
 
@@ -1173,7 +1122,6 @@ Array.prototype.myMap = function (callback, val) {
 //     return nums
 // }
 // console.log(reverse(arr));
-
 
 // DSA 2. ----
 
@@ -1214,8 +1162,6 @@ Array.prototype.myMap = function (callback, val) {
 // }
 // console.log(moveNegative(arr));
 
-
-
 // Leetecode ----
 
 // let arr = [3,2,3];
@@ -1231,7 +1177,6 @@ Array.prototype.myMap = function (callback, val) {
 //   return nums[s];
 // };
 // console.log(Func(arr));
-
 
 // ===============All star pattern ===============
 
@@ -1385,9 +1330,6 @@ Array.prototype.myMap = function (callback, val) {
 // }
 // console.log(MergeSort(arr1,arr2))
 
-
-
-
 // Linked list ---------------
 // class LinkeList {
 //   constructor(data) {
@@ -1466,8 +1408,6 @@ Array.prototype.myMap = function (callback, val) {
 // test.reverse();
 // console.log(test);
 
-
-
 // leetcode -------
 
 // let strs = ["eat", "tea","tae"];
@@ -1481,7 +1421,6 @@ Array.prototype.myMap = function (callback, val) {
 // }
 // }
 // console.log(updated, "map");
-
 
 // techincal DSA -----
 
@@ -1498,7 +1437,6 @@ Array.prototype.myMap = function (callback, val) {
 //   }
 // }
 // console.log(Func([1, 1, 2, 2, 3, 4, 4, 5, 6, 7, 8, 8]));
-
 
 // sort array using recursion ----
 
@@ -1533,7 +1471,6 @@ Array.prototype.myMap = function (callback, val) {
 // console.log(sort([2, 3, 51, 78, 1, 9, 0]));
 // // console.log(updated)
 
-
 // function Func(str) {
 //   let map = {};
 //   let updated = str.split("");
@@ -1551,7 +1488,6 @@ Array.prototype.myMap = function (callback, val) {
 //   return char;
 // }
 // console.log(Func("Hello worldddd"));
-
 
 // leetcdode longest palindrome substring -----
 
@@ -1595,7 +1531,6 @@ Array.prototype.myMap = function (callback, val) {
 // }
 // console.log(Func("babad"));
 
-
 // intersection of two array ----
 
 // function Func(num1, num2) {
@@ -1616,8 +1551,6 @@ Array.prototype.myMap = function (callback, val) {
 //   }
 // }
 // console.log(Func([4, 9, 5], [9, 4, 9, 8, 4]));
-
-
 
 // shifting zero to end -----
 
@@ -1644,8 +1577,6 @@ Array.prototype.myMap = function (callback, val) {
 // }
 // console.log(Test(arr));
 
-
-
 // let str1 = "silent";
 // let str2 = "listen";
 
@@ -1666,7 +1597,6 @@ Array.prototype.myMap = function (callback, val) {
 //   return true;
 // }
 // console.log(isAnagram(str1, str2));
-
 
 // Squares of a Sorted Array -----
 // let nums = [-4, -1, 0, 3, 10];
@@ -1692,7 +1622,6 @@ Array.prototype.myMap = function (callback, val) {
 // }
 // console.log(Test(nums))
 
-
 // let nums = [1,2,3,4,5,6,7]
 //   k = 3;
 // function Test(nums, k) {
@@ -1703,7 +1632,6 @@ Array.prototype.myMap = function (callback, val) {
 // }
 // console.log(Test(nums, k));
 
-
 // let s1 = "ab", s2 = "eidbaooo"
 // function Test(str1,str2){
 //    let s1 =  str1.split("")
@@ -1711,5 +1639,3 @@ Array.prototype.myMap = function (callback, val) {
 //   console.log(s1,s2)
 // }
 // Test(s1,s2)
-
-

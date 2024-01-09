@@ -724,7 +724,11 @@
 
 // The isNaN() function is used to determine whether a value is an illegal number (Not-a-Number) or not. i.e, This function returns true if the value equates to NaN. Otherwise it returns false.
 
-// JavaScript is an interpreted language, not a compiled language. An interpreter in the browser reads over the JavaScript code, interprets each line, and runs it. Nowadays modern browsers use a technology known as Just-In-Time (JIT) compilation, which compiles JavaScript to executable bytecode just as it is about to run.
+// Null in JavaScript means an empty value and is also a primitive type in JavaScript. The variable which has been assigned as null contains no value. Undefined,
+// on the other hand, means the variable has been declared, but its value has not been assigned
+
+// JavaScript is an interpreted language, not a compiled language. An interpreter in the browser reads over the JavaScript code, interprets each line, and runs it.
+//  Nowadays modern browsers use a technology known as Just-In-Time (JIT) compilation, which compiles JavaScript to executable bytecode just as it is about to run.
 
 // The preventDefault() method cancels the event if it is cancelable, meaning that the default action or behaviour that belongs to the event will not occur
 
@@ -761,16 +765,6 @@
 // let arrayIntegers3 = arrayIntegersOriginal3.splice(3, 1, "a", "b", "c"); //returns [4]; original array: [1, 2, 3, "a", "b", "c", 5]
 
 // lambda or arrow functions - An arrow function is a shorter syntax for a function expression and does not have its own this
-
-// first class function - In Javascript, functions are first class objects. First-class functions means when functions in that language are treated like any other variable.
-
-// first order function - A first-order function is a function that doesn’t accept another function as an argument and doesn’t return a function as its return value.
-
-// higher order function - A higher-order function is a function that accepts another function as an argument or returns a function as a return value or both.
-
-// Curring - Currying is the process of taking a function with multiple arguments and turning it into a sequence of functions each with only a single argument.
-
-// Pure function is a function where the return value is only determined by its arguments without any side effects.
 
 // let is Hoisted but not initialized
 
@@ -832,11 +826,14 @@
 // }
 // getData()
 
-// Promie All
+// Promie All - Fulfills when all of the promises fulfill; rejects when any of the promises rejects.
+// Promise AllSettled - Fulfills when all promises settle.
+// Promise Race - it will return first promise to be resolved it's either resolved or rejected
+// Promise any - first Pormise to be only resolved and if all are rejected then it will return 'Aggretaror Error'
 
 // let p = new Promise((res, rej) => {
 //     setTimeout(() => {
-//     res("promis 1");
+//         res("promis 1");
 //     },1000)
 //   });
 //   let p2 = new Promise((res, rej) => {
@@ -846,6 +843,83 @@
 //   });
 // Promise.all([p, p2]).then((res) => console.log(res,"res")).catch((err) => console.log(err, "err"));
 // Promise.allSettled([p,p2]).then((res) => console.log(res,'res')).catch((err) => console.log(err,'err'))
+// Promise.any([p,p2]).then((res) => console.log(res,'res')).catch((err) => console.log(err,'err'))
+// Promise.race([p,p2]).then((res) => console.log(res,'res')).catch((err) => console.log(err,'err'))
+
+// Promise All -> promise.all([p1,p2,p3])
+// if all resolved - then return will be an array and it wait for all of them to finsih
+// if any of rejected - as soon as any of the promise rejected it will return error
+
+// Promise All -> promise.allSettled([p1,p2,p3])
+// if all resolved - then return will be an array and it wait for all of them to finsih
+// if any of rejected - it will wait for all promise to settle no matter if promise is rejected or resolved it will execute all promise at first then result will be array of promises
+
+// Promise All -> promise.race([p1,p2,p3])
+// it will return first settled first promise
+// what is first promise rejected then error will be thrown
+
+// Promise All -> promise.any([p1,p2,p3])
+// it will return first promise to get resolved if all promise get rejected then it will throw Aggretaror Error
+
+// function PromiseAll(promise) {
+//   let response = [];
+//   let errorRes = [];
+//   return new Promise((resolve, reject) => {
+//     promise.forEach(async (element, i) => {
+//       try {
+//         let res = await element;
+//         response.push(res);
+//         if (i == promise?.length - 1) {
+//           if (errorRes?.length > 0) {
+//             reject(errorRes);
+//           } else {
+//             resolve(response);
+//           }
+//         }
+//       } catch (err) {
+//         errorRes.push(err);
+//         reject(err);
+//       }
+//     });
+//   });
+// }
+
+// function PromiseAny(promise) {
+//   let response = [];
+//   let errorRes = [];
+//   return new Promise((resolve, reject) => {
+//     promise.forEach(async (element, i) => {
+//       try {
+//         let res = await element;
+//         response.push(res);
+//         resolve(response);
+//       } catch (err) {
+//         errorRes.push(err);
+//       }
+//       if (errorRes?.length == promise?.length) {
+//         reject("Aggerator Erro");
+//       }
+//     });
+//   });
+// }
+
+// let p = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     rej("promis 1");
+//   }, 1000);
+// });
+// let p2 = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     rej("promis 2");
+//   }, 5000);
+// });
+// PromiseAny([p, p2])
+//   .then((res) => {
+//     console.log(res, "res");
+//   })
+//   .catch((err) => {
+//     console.log(err, "errr");
+//   });
 
 // Promise PolyFill
 // function PromisPolyFill(executer) {
@@ -972,13 +1046,9 @@
 // spread operator is used to expand or spread elements from an iterable array , object and string into individual elements
 // rest operator is used in function parameter to collect all remanning elements
 
-// Pure function is a function which return same output for same input
-
 // Event handling is proccess of responding to user action in web page
 // Events are signals fired inside the browser window that notify of changes in the browser or operating system environment.
 // Programmers can create event handler code that will run when an event fires, allowing web pages to respond appropriately to change.
-
-// pending -- fetch
 
 // React ----
 
@@ -1058,8 +1128,6 @@
 
 // Higher-order components (HOCs) are a powerful feature of the React library. They allow you to reuse component logic across multiple components.
 // In React, a higher-order component is a function that takes a component as an argument and returns a new component that wraps the original component
-
-// A component's lifecycle has three main phases: the Mounting Phase, the Updating Phase, and the Unmounting Phase.
 
 // React Router - it enables the creation of single-page web or mobile apps that allow navigating without refreshing the page. It also allows us to use browser history features while preserving the right application view.
 
@@ -1182,9 +1250,6 @@
 // and I have had the opportunity to work on various projects and with different technologies, from developing web applications leading a front end of the project
 // in my previous role at octal It solution. I am known for my problem-solving skills and ability to work collaboratively with cross-functional teams.
 
-// we have not used SSR in this cause the only object is to make SEO frienldy and that's it
-//  Next. js provides a custom head component for setting up head metadata
-
 // I worked with 6 personal teams (4 developers, 1BA, 1PM) on the Mada properties website, and the main objective of this website is to list properties for customers
 // published by agents or companies that basically worked in UAE and Saudi region my main role was to manage and work on front end using a library like next js and
 // react js, in this our main objective to make site SEO friendly that's why we have chosen to work on Next the best part about this project is that I got to learn
@@ -1287,6 +1352,8 @@
 
 // in Nextjs index file is generated while rendering but it's not present in public folder
 
+// Static Site Generation (SSG) - page get pre renderd during the build process
+
 // react hydration
 
 // React vs Next JS
@@ -1330,7 +1397,14 @@
 // deployment. Additionally, Next.js supports built-in SEO and analytics, making it easier to
 //  optimize your application for search engines and track user engagement.
 
-// Server-side rendering (SSR) is the process of rendering a web page on the server before sending it to the client's browser. SSR is important because it allows search engines to crawl and index your website's content, which can improve your website's SEO. Additionally, SSR can improve the initial page load time and improve the user experience for users with slow internet connections or devices.
+// Server-side rendering (SSR) is the process of rendering a web page on the server before sending it to the client's browser. 
+// SSR is important because it allows search engines to crawl and index your website's content, which can improve your website's SEO. 
+// Additionally, SSR can improve the initial page load time and improve the user experience for users with slow internet connections or devices.
+
+// Client-Side Rendering (CSR) and Server-Side Rendering (SSR) are two prominent rendering techniques in web development, each with its unique benefits. 
+// CSR excels in interactivity and performance, while SSR offers advantages in SEO and initial load performance.
+
+// If you export a function called getStaticProps (Static Site Generation) from a page, Next.js will pre-render this page at build time using the props returned by getStaticProps
 
 // The getStaticProps function is used to fetch data at build time for static site generation
 
@@ -1404,8 +1478,6 @@
 // obj.getNameFunc()
 // obj.getName.call(obj)
 
-
-
 // let obj = {
 //   name: "hello",
 // };
@@ -1417,7 +1489,7 @@
 // };
 // obj2.getName.apply(obj,['first','seocnd'])
 
-
+// A polyfill is a piece of code (usually JavaScript on the Web) used to provide modern functionality on older browsers that do not natively support it.
 // PollyFill for Call , Apply , Bind
 
 // Function.prototype.myCall = function (context, ...args) {
@@ -1438,3 +1510,82 @@
 // };
 
 // obj2.getName.apply(obj, ["first", "seocnd"]);
+
+// Subject: Confirmation of Application Submission for React Developer Position
+
+// Dear [Hiring Manager's Name],
+
+// I trust this email finds you well. I am writing to confirm the submission of my application for the React Developer position at [Company Name]. I am enthusiastic about the opportunity to contribute my skills and experience to your esteemed team.
+
+// Please find attached my resume for your consideration. I am looking forward to the possibility of discussing how my background aligns with the needs of your organization during the upcoming interview.
+
+// Thank you for considering my application. I am available at your earliest convenience and appreciate the opportunity to be a part of [Company Name].
+
+// Best regards,
+
+// [Your Full Name]
+// [Your Contact Information]
+// Attachment: [YourResume.pdf]
+
+// Why you leave your previous company?
+// what is your Salary Expectatin and is it negotiable?
+
+// function MyPromie(executor) {
+//   let onResolve,
+//     onReject,
+//     isFullfilled = false,
+//     isCalled = false,
+//     isRejected = false,
+//     value;
+//   this.then = function (callback) {
+//     onResolve = callback;
+//     if (isFullfilled && !isCalled) {
+//       isCalled = true;
+//       onResolve(value);
+//     }
+//     return this;
+//   };
+//   this.catch = function (callback) {
+//     onReject = callback;
+//     if (isRejected && !isCalled) {
+//       isCalled = true;
+//       onReject(value);
+//     }
+//     return this;
+//   };
+//   function resolve(val) {
+//     isFullfilled = true;
+//     value = val;
+//     if (typeof onResolve == "function") {
+//       onResolve(value);
+//       isCalled = true;
+//     }
+//   }
+//   function reject(val) {
+//     isRejected = true;
+//     value = val;
+//     if (typeof onReject == "function") {
+//       onReject(value);
+//       isCalled = true;
+//     }
+//   }
+//   try {
+//     executor(resolve, reject);
+//   } catch (error) {
+//     reject(error);
+//   }
+// }
+
+// let promise = new MyPromie((resolve, reject) => {
+//   setTimeout(() => {
+//     reject(2);
+//   }, 1000);
+// })
+//   .then((res) => console.log(res, "resss"))
+//   .catch((err) => console.log(err, "err"));
+
+
+
+// I hope you’re doing well! I’m interested in the role you posted for your organization. I have a total experience of 2.3 years of Frontend development using ReactJs
+// Best regards,
+// Jatin Makad
