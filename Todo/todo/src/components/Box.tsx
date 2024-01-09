@@ -66,7 +66,7 @@ const Box = <T extends InputValue>({
         value={user?.age || 0}
         onChange={(e) =>
           setUser((prev) => {
-            return { ...prev, age: Number(e.target.value) };
+            return { ...prev!, age: Number(e.target.value) };
           })
         }
       />
@@ -76,7 +76,7 @@ const Box = <T extends InputValue>({
         value={user?.name || ""}
         onChange={(e) =>
           setUser((prev) => {
-            return { ...prev, name: e.target.value };
+            return { ...prev!, name: e.target.value };
           })
         }
       />
