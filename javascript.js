@@ -713,6 +713,8 @@
 // let and const declaration are alse hoisted but they behave very differently than var
 // block scope is a compound statement and group multiple statements
 
+// The directive looks like a string: "use strict" or 'use strict'. When it is located at the top of a script, the whole script works the “modern” way.
+
 // In Javascript, functions are first class objects. First-class functions means when functions in that language are treated like any other variable.
 // For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable. For example, in the below example, handler functions assigned to a listener
 
@@ -1057,6 +1059,12 @@
 // JSX Complexity
 // Problems With SEO
 // we have to import library to perform some specific actions
+
+// index.js : This file is the entry point of your React application. It is responsible for rendering the root component (App.js) and attaching it to the HTML document. 
+// It sets up the React DOM and provides the initial rendering of your app.
+
+// createRoot lets you create a root to display React components inside a browser DOM node.
+// Call root.render to display a piece of JSX (“React node”) into the React root’s browser DOM node.
 
 // A single-page application is a web application or website that interacts with the user by dynamically rewriting the current web page with new data from the web server, instead of the default
 //  method of a web browser loading entire new pages
@@ -1589,3 +1597,25 @@
 // I hope you’re doing well! I’m interested in the role you posted for your organization. I have a total experience of 2.3 years of Frontend development using ReactJs
 // Best regards,
 // Jatin Makad
+
+
+
+// A div element is used for block-level organization and styling of page elements, whereas a span element is used for inline organization and styling
+
+// Inline elements are designed to take very minimal space while block elements are programmed so that they take up as much space as needed.
+
+// HTML tags used to provide additional information about a page to search engines and other clients
+
+// CSS pseudo-classes are keywords added to selectors that specify a state or behavior of an element. They allow you to style elements based on their state or position in the document tree.
+
+// CSS pseudo-elements are used to style specific parts of an element. They are denoted by double colons (::) and provide additional styling capabilities.
+
+// The more specific a selector is, the higher its specificity value. When multiple conflicting rules target the same element, the one with the highest specificity will take precedence.
+
+// CSS vendor prefixes are used to add support for specific CSS features in different web browsers. They are used before the standard property name and are specific to certain browser engines. Here are examples of some common CSS vendor prefixes:
+
+// CSS preprocessors are tools that extend the functionality of CSS by adding features like variables, nesting, mixins, and functions. They allow you to write more maintainable and reusable CSS code.
+
+// https://css-tricks.com/css-only-carousel/
+
+// defer and async javascript?
