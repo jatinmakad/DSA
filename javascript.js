@@ -1254,9 +1254,11 @@
 // }
 // console.log(a, "outer");
 
-// my name is jatin makad and I have completed my bachelor of engineering in computer science from LPU and I have spent 2.3 years working as a software developer
-// and I have had the opportunity to work on various projects and with different technologies, from developing web applications leading a front end of the project
-// in my previous role at octal It solution. I am known for my problem-solving skills and ability to work collaboratively with cross-functional teams.
+// hi ,my name is jatin makad and I have completed my bachelor's of computer science engenneringng from LPU . from last 2.3 years i am working as a front end developer.
+// and in my previous role I worked on various projects mainly based on React js and Next js. i have wored on Responsive front end development,wireframe desinging ,
+// protype designing and API integrations for various projects.
+// I have also led a team of 4 front end developers in my previous project , helping them to improve there code and guideing them through code reviews 
+// I am known for my problem-solving skills and ability to work collaboratively with cross-functional teams.
 
 // I worked with 6 personal teams (4 developers, 1BA, 1PM) on the Mada properties website, and the main objective of this website is to list properties for customers
 // published by agents or companies that basically worked in UAE and Saudi region my main role was to manage and work on front end using a library like next js and
@@ -1282,7 +1284,7 @@
 
 // !<!DOCTYPE> - this line tells the browser that this piece of coded is HTML5
 
-// Attributes - HTML Elements contain a starting tag, content, and an ending tag
+// elements - HTML Elements contain a starting tag, content, and an ending tag
 
 // Tags - HTML tags contain only starting and closing tag
 
@@ -1300,10 +1302,6 @@
 
 // We have seen that the re-rendering of the UI is the most expensive part and React manages to do this most efficiently by ensuring that the Real DOM
 //  receives batch updates to re-render the UI. This entire process of transforming changes to the real DOM is called Reconciliation.
-
-// Hello, I'm Jatin Makad, a computer science graduate from LPU with a Bachelor's in Engineering. Over the past 2.3 years, I've polished my skills as a software developer,
-// working on diverse projects and technologies. Notably, I led the front-end development at Octal IT Solution, showcasing my problem-solving abilities and collaborative
-// spirit. I'm excited to use what I've learned and my skills to help out in cool projects and work well with teams.
 
 // 1. class-based components are state-full components and function components are stateless components
 // 2. class-based components don't need any extra function to manage their component state or to perform any kind of side effect to its component and on the other hand
@@ -1520,23 +1518,16 @@
 // obj2.getName.apply(obj, ["first", "seocnd"]);
 
 // Subject: Confirmation of Application Submission for React Developer Position
-
 // Dear [Hiring Manager's Name],
-
 // I trust this email finds you well. I am writing to confirm the submission of my application for the React Developer position at [Company Name]. I am enthusiastic about the opportunity to contribute my skills and experience to your esteemed team.
-
 // Please find attached my resume for your consideration. I am looking forward to the possibility of discussing how my background aligns with the needs of your organization during the upcoming interview.
-
 // Thank you for considering my application. I am available at your earliest convenience and appreciate the opportunity to be a part of [Company Name].
-
 // Best regards,
 
 // [Your Full Name]
 // [Your Contact Information]
 // Attachment: [YourResume.pdf]
 
-// Why you leave your previous company?
-// what is your Salary Expectatin and is it negotiable?
 
 // function MyPromie(executor) {
 //   let onResolve,
@@ -1618,6 +1609,19 @@
 
 // NPM is a package management that is used to install, uninstall, and update Javascript packages on your workstation, whereas NPX is a package executer that is used to directly execute Javascript
 // packages without installing them
+// defer and async javascript?
+
+
+// Webpack is a powerful module bundler for JavaScript applications. It takes modules with dependencies and generates static assets that can be served to a browser. 
+// It simplifies the process of managing and bundling various assets like JavaScript, CSS, and images, enabling efficient resource utilization and enhancing application
+//  performance.
+
+// Module bundling: Webpack allows you to bundle all the dependencies, including JavaScript, CSS, and other assets, into a single file or a few optimized files.
+// Code splitting: It supports code splitting, which allows you to split your code into smaller chunks and load them asynchronously when needed, reducing initial loading times.
+// Loaders: Webpack provides loaders to preprocess and transform different types of files, such as CSS, SCSS, TypeScript, and more, allowing you to incorporate them into your project seamlessly.
+// Tree shaking: Tree shaking is a process in which Webpack eliminates dead code that is not used in the application, resulting in smaller bundle sizes.
+// Using dynamic imports: Utilizing dynamic imports allows you to load modules asynchronously when needed, reducing the initial loading time.
+// Minification: Webpack offers plugins like UglifyJSPlugin or TerserPlugin to minify and compress the bundled code, reducing its size.
 
 
 
@@ -1667,3 +1671,24 @@
 // io.sockets.on() ; //initial connection from a client.
 
 // Socket IO  End ----
+// Mada Property ----
+
+// it was basically a real state marketplace in which any company or property agent can register their property's . 
+// customers can look up for these proerty's , prices and they can buy or book the property on website .
+// my main role in this project was to manage front end ,designing prototype and building it from sratch 
+// and I used Next js and React js for front end of this project 
+// i have also Integrated Google Maps for enhanced property location visualization, improving user engagement.
+// Implemented i18next Translation for a seamless multilingual user experience, expanding the platform’s reach by
+
+
+// Fancy ---
+
+// it was a fantcy gamming web app where user can play fantcy cricket , football , hockey and other team games 
+// i led front end of this project using React js , context API  ,also used socket IO for real time data integration it was little bit heavy website 
+// due to image and real time data flow so I had to be concious about it's code i follwed best practices of react like optimizing the react code using lazy loading , image optimization and used CDN
+// for higher size media
+
+// I have worked mainly on admin panel 
+// utilized the ReactJS, Tailwind CSS to build robust and scalable solutions in this project, participated in bug fixing and code improvement
+// resulting enhanced user experience
+
