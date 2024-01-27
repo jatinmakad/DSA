@@ -1060,7 +1060,7 @@
 // Problems With SEO
 // we have to import library to perform some specific actions
 
-// index.js : This file is the entry point of your React application. It is responsible for rendering the root component (App.js) and attaching it to the HTML document. 
+// index.js : This file is the entry point of your React application. It is responsible for rendering the root component (App.js) and attaching it to the HTML document.
 // It sets up the React DOM and provides the initial rendering of your app.
 
 // createRoot lets you create a root to display React components inside a browser DOM node.
@@ -1405,11 +1405,11 @@
 // deployment. Additionally, Next.js supports built-in SEO and analytics, making it easier to
 //  optimize your application for search engines and track user engagement.
 
-// Server-side rendering (SSR) is the process of rendering a web page on the server before sending it to the client's browser. 
-// SSR is important because it allows search engines to crawl and index your website's content, which can improve your website's SEO. 
+// Server-side rendering (SSR) is the process of rendering a web page on the server before sending it to the client's browser.
+// SSR is important because it allows search engines to crawl and index your website's content, which can improve your website's SEO.
 // Additionally, SSR can improve the initial page load time and improve the user experience for users with slow internet connections or devices.
 
-// Client-Side Rendering (CSR) and Server-Side Rendering (SSR) are two prominent rendering techniques in web development, each with its unique benefits. 
+// Client-Side Rendering (CSR) and Server-Side Rendering (SSR) are two prominent rendering techniques in web development, each with its unique benefits.
 // CSR excels in interactivity and performance, while SSR offers advantages in SEO and initial load performance.
 
 // If you export a function called getStaticProps (Static Site Generation) from a page, Next.js will pre-render this page at build time using the props returned by getStaticProps
@@ -1592,13 +1592,9 @@
 //   .then((res) => console.log(res, "resss"))
 //   .catch((err) => console.log(err, "err"));
 
-
-
 // I hope you’re doing well! I’m interested in the role you posted for your organization. I have a total experience of 2.3 years of Frontend development using ReactJs
 // Best regards,
 // Jatin Makad
-
-
 
 // A div element is used for block-level organization and styling of page elements, whereas a span element is used for inline organization and styling
 
@@ -1618,4 +1614,56 @@
 
 // https://css-tricks.com/css-only-carousel/
 
-// defer and async javascript?
+// Async allows your script to run as soon as it's loaded, without blocking other elements on the page. Defer means your script will only execute after the page has finished loading
+
+// NPM is a package management that is used to install, uninstall, and update Javascript packages on your workstation, whereas NPX is a package executer that is used to directly execute Javascript
+// packages without installing them
+
+
+
+
+// Socket IO  Start ----
+
+// WebSocket is a technology that enables two-way realtime communication between client and server. In contrast, Socket.IO is a library that provides an abstraction layer on top of WebSockets,
+//  making it easier to create realtime applications.
+// It seems that WebSockets have an edge in terms of performance over Socket.IO; for example, WebSockets have a much lower memory requirement compared to Socket.IO. However, some differences
+//  are to be expected. After all, Socket.IO is a more complex (and demanding) solution than raw WebSockets.
+
+// HTTP -- Hypertext Transfer Protocol
+// Websoket is a communication protocol same as HTTP , FTP and SMTP
+
+// connection -----
+// HTTP - is a one way data flow only client can send req. for data from server
+// Websocket - used to establish connection between client and server its a two way data flow
+
+// Socket IO is a library based on webscoket and easy to implement rather than traditional websocket
+
+// IO is basicaly a circuit with multiple socket in it
+// and socket is a single connection 
+
+// IO.emit is when client or server send req. to every client in that particular circuit 
+// sokcet.emit is when client or server send req. to particular user only
+
+// socket.brodcast.emilt - 
+// socket.to( id of particular socket to make connection ).emit() to trigger event for particular room
+// socket.join( room name ) to join people in room
+
+// emit is when event trigger ( this event ) 
+// on ( recive data )
+
+// socket.emit('message', "this is a test"); //sending to sender-client only
+// socket.broadcast.emit('message', "this is a test"); //sending to all clients except sender
+// socket.broadcast.to('game').emit('message', 'nice game'); //sending to all clients in 'game' room(channel) except sender
+// socket.to('game').emit('message', 'enjoy the game'); //sending to sender client, only if they are in 'game' room(channel)
+// socket.broadcast.to(socketid).emit('message', 'for your eyes only'); //sending to individual socketid
+// io.emit('message', "this is a test"); //sending to all clients, include sender
+// io.in('game').emit('message', 'cool game'); //sending to all clients in 'game' room(channel), include sender
+// io.of('myNamespace').emit('message', 'gg'); //sending to all clients in namespace 'myNamespace', include sender
+// socket.emit(); //send to all connected clients
+// socket.broadcast.emit(); //send to all connected clients except the one that sent the message
+// socket.on(); //event listener, can be called on client to execute on server
+// io.sockets.socket(); //for emiting to specific clients
+// io.sockets.emit(); //send to all connected clients (same as socket.emit)
+// io.sockets.on() ; //initial connection from a client.
+
+// Socket IO  End ----
