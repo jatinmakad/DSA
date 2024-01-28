@@ -86,7 +86,6 @@ var minSubArrayLen = function (target, nums) {
   for (let i = 0; i < nums.length; i++) {
     sum += nums[i];
     while (sum >= target) {
-      console.log(result, i - left + 1);
       result = Math.min(result, i - left + 1);
       sum -= nums[left++];
     }

@@ -94,7 +94,7 @@
 // }
 // a()
 
-// shallow copy -----`
+// shallow copy -----
 // It makes a copy of the reference to X into Y. Think about it as a copy of X’s Address. So, the addresses of X and Y will be the same i.e. they will be pointing to the same memory location.
 // let obj = {age:21,name:"jatin"}
 // let obj2 = obj
@@ -852,15 +852,15 @@
 // if all resolved - then return will be an array and it wait for all of them to finsih
 // if any of rejected - as soon as any of the promise rejected it will return error
 
-// Promise All -> promise.allSettled([p1,p2,p3])
+// Promise allSettled -> promise.allSettled([p1,p2,p3])
 // if all resolved - then return will be an array and it wait for all of them to finsih
 // if any of rejected - it will wait for all promise to settle no matter if promise is rejected or resolved it will execute all promise at first then result will be array of promises
 
-// Promise All -> promise.race([p1,p2,p3])
+// Promise race -> promise.race([p1,p2,p3])
 // it will return first settled first promise
 // what is first promise rejected then error will be thrown
 
-// Promise All -> promise.any([p1,p2,p3])
+// Promise any -> promise.any([p1,p2,p3])
 // it will return first promise to get resolved if all promise get rejected then it will throw Aggretaror Error
 
 // function PromiseAll(promise) {
@@ -1067,7 +1067,7 @@
 // Call root.render to display a piece of JSX (“React node”) into the React root’s browser DOM node.
 
 // A single-page application is a web application or website that interacts with the user by dynamically rewriting the current web page with new data from the web server, instead of the default
-//  method of a web browser loading entire new pages
+// method of a web browser loading entire new pages
 
 // In React, components have a lifecycle that consists of different phases. Each phase has a set of lifecycle methods that are called at specific points in the component's lifecycle.
 // These methods allow you to control the component's behavior and perform specific actions at different stages of its lifecycle.
@@ -1253,12 +1253,6 @@
 //   console.log(a, "inner");
 // }
 // console.log(a, "outer");
-
-// hi ,my name is jatin makad and I have completed my bachelor's of computer science engenneringng from LPU . from last 2.3 years i am working as a front end developer.
-// and in my previous role I worked on various projects mainly based on React js and Next js. i have wored on Responsive front end development,wireframe desinging ,
-// protype designing and API integrations for various projects.
-// I have also led a team of 4 front end developers in my previous project , helping them to improve there code and guideing them through code reviews 
-// I am known for my problem-solving skills and ability to work collaboratively with cross-functional teams.
 
 // I worked with 6 personal teams (4 developers, 1BA, 1PM) on the Mada properties website, and the main objective of this website is to list properties for customers
 // published by agents or companies that basically worked in UAE and Saudi region my main role was to manage and work on front end using a library like next js and
@@ -1508,7 +1502,7 @@
 //   context.myFn(...args);
 // };
 
-// Function.prototype.myApply = function (context, ...args) {
+// Function.prototype.myBind = function (context, ...args) {
 //   context.myFn = this;
 //   return function () {
 //     return context.myFn(...args);
@@ -1607,10 +1601,14 @@
 
 // CSS preprocessors are tools that extend the functionality of CSS by adding features like variables, nesting, mixins, and functions. They allow you to write more maintainable and reusable CSS code.
 
+// A semantic element clearly describes its meaning to both the browser and the developer. Examples of non-semantic elements: <div> and <span></span>
+
+// Metadata is data (information) about data. <meta> tags always go inside the <head> element, and are typically used to specify character set, page description,
+// keywords, author of the document, and viewport settings
+
 // https://css-tricks.com/css-only-carousel/
 
 // defer and async javascript?
-
 
 // Webpack is a powerful module bundler for JavaScript applications. It takes modules with dependencies and generates static assets that can be served to a browser. 
 // It simplifies the process of managing and bundling various assets like JavaScript, CSS, and images, enabling efficient resource utilization and enhancing application
@@ -1627,7 +1625,6 @@
 
 
 // Mada Property ----
-
 // it was basically a real state marketplace in which any company or property agent can register their property's . 
 // customers can look up for these proerty's , prices and they can buy or book the property on website .
 // my main role in this project was to manage front end ,designing prototype and building it from sratch 
@@ -1635,9 +1632,7 @@
 // i have also Integrated Google Maps for enhanced property location visualization, improving user engagement.
 // Implemented i18next Translation for a seamless multilingual user experience, expanding the platform’s reach by
 
-
 // Fancy ---
-
 // it was a fantcy gamming web app where user can play fantcy cricket , football , hockey and other team games 
 // i led front end of this project using React js , context API  ,also used socket IO for real time data integration it was little bit heavy website 
 // due to image and real time data flow so I had to be concious about it's code i follwed best practices of react like optimizing the react code using lazy loading , image optimization and used CDN
@@ -1647,3 +1642,12 @@
 // utilized the ReactJS, Tailwind CSS to build robust and scalable solutions in this project, participated in bug fixing and code improvement
 // resulting enhanced user experience
 
+// hi , my name is jatin makad and I have completed my bachelor's of computer science engenneringng from LPU . from last 2.3 years i am working as a front end developer.
+// and in my previous role I worked on various projects mainly based on React js and Next js. i have wored on Responsive front end development,wireframe desinging ,
+// protype designing and API integrations for various projects.
+// I have also led a team of 3 front end developers in my previous project , helping them to improve there code and guideing them through code reviews 
+// I am known for my problem-solving skills and ability to work collaboratively with cross-functional teams.
+
+
+// event propagation where the event first triggers on the innermost target element, and then successively triggers on the ancestors (parents) of the target element
+//  in the same nesting hierarchy till it reaches the outermost DOM element or document object
