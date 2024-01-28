@@ -1254,7 +1254,6 @@
 // }
 // console.log(a, "outer");
 
-<<<<<<< HEAD
 // I worked with 6 personal teams (4 developers, 1BA, 1PM) on the Mada properties website, and the main objective of this website is to list properties for customers
 // published by agents or companies that basically worked in UAE and Saudi region my main role was to manage and work on front end using a library like next js and
 // react js, in this our main objective to make site SEO friendly that's why we have chosen to work on Next the best part about this project is that I got to learn
@@ -1287,13 +1286,11 @@
 // The tags mark the beginning and the end of an element. They may not be necessary for some elements, especially the closing tags
 
 // Voided tags - HTML elements which do not have closing tags or do not need to be closed are Void elements. For Example <br />, <img />, <hr />, etc.
-=======
 // hi ,my name is jatin makad and I have completed my bachelor's of computer science engenneringng from LPU . from last 2.3 years i am working as a front end developer.
 // and in my previous role I worked on various projects mainly based on React js and Next js. i have wored on Responsive front end development,wireframe desinging ,
 // protype designing and API integrations for various projects.
 // I have also led a team of 4 front end developers in my previous project , helping them to improve there code and guideing them through code reviews 
 // I am known for my problem-solving skills and ability to work collaboratively with cross-functional teams.
->>>>>>> 41561c3eec1fff7644141f665d9e91495c280e06
 
 // React maintains two Virtual DOM at each time, one contains the updated Virtual DOM and one which is just the pre-update version of this updated Virtual DOM.
 //  Now it compares the pre-update version with the updated Virtual DOM and figures out what exactly has changed in the DOM like which components have been changed.
