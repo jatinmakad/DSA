@@ -1260,39 +1260,6 @@
 // I have also led a team of 4 front end developers in my previous project , helping them to improve there code and guideing them through code reviews 
 // I am known for my problem-solving skills and ability to work collaboratively with cross-functional teams.
 
-// I worked with 6 personal teams (4 developers, 1BA, 1PM) on the Mada properties website, and the main objective of this website is to list properties for customers
-// published by agents or companies that basically worked in UAE and Saudi region my main role was to manage and work on front end using a library like next js and
-// react js, in this our main objective to make site SEO friendly that's why we have chosen to work on Next the best part about this project is that I got to learn
-// a lot about Next js, which I was really curious about, we have deployed the first version in 2 months and then continue to improve with feedback by our client
-// and QA team.
-
-// I worked with 6 person teams (4 developers, 1BA, 1 PM) on the "Mada properties" website, and the main objective of this website is to list properties for customers
-// published by agents or companies that worked in the UAE and Saudi region and many other features, my main role was to manage and work on the front end using a library like Next JS,
-// React JS, Google Map APIs, and i18next for translation between English and Saudi, our main objective is to make the site SEO friendly which's why we have chosen to work on it Next JS the best part about this project is that I got to learn
-// a lot about Next js, which I was really curious about, we have deployed the first version in 2 months and then continue to improve with feedback from our client
-// and QA team.
-
-// completed my notice period and immediately available
-
-// Fancy betting app In this we have a 4 personal team (3 developers and 1 PM), so basically this project consists of full fledge online gaming platform that has casino
-// , multiple sports games, and many other features like listing matches according to their sports type, league and then the user can place a bet on multiple markets
-// for a single match like fancy, Betfair , bookmaker and user can also watch live matches and scoreboard my role in this project is to manage front end for mobile
-// and web responive we have used React js library for front end and worked on new features like working with socket IO for getting odds of matches in real-time
-// constanly updating odds in our site for all markets
-
-// HTML stands for HyperText Markup Language. It is a standard text formatting language used for developing web pages
-
-// !<!DOCTYPE> - this line tells the browser that this piece of coded is HTML5
-
-// elements - HTML Elements contain a starting tag, content, and an ending tag
-
-// Tags - HTML tags contain only starting and closing tag
-
-// the elements tell the browser what to display, the attributes define how they will behave.
-// The tags mark the beginning and the end of an element. They may not be necessary for some elements, especially the closing tags
-
-// Voided tags - HTML elements which do not have closing tags or do not need to be closed are Void elements. For Example <br />, <img />, <hr />, etc.
-
 // React maintains two Virtual DOM at each time, one contains the updated Virtual DOM and one which is just the pre-update version of this updated Virtual DOM.
 //  Now it compares the pre-update version with the updated Virtual DOM and figures out what exactly has changed in the DOM like which components have been changed.
 //   This process of comparing the current Virtual DOM tree with the previous one is known as ‘diffing’. Once React finds out what exactly has changed then it updates those objects only, on real DOM.
@@ -1347,12 +1314,16 @@
 // React is a library for building user interfaces
 // You have to make decisions on other features of the app like routing, styling, authentication etc.
 
-// Next.js
-// A package that uses React for building user interfaces
-// Loaded with a lot more features that enable you to build full fledged production ready applications.
-// Features exactly like routing, styling, authentication, bundle optimization etc.
-// There's no need to install additional packages. Next.js provides everything for you
-// Opinions and conventions need to be followed to implement the above said features
+// getStaticProps -- It preloads all of the data needed for a given page and renders pages ahead of the user’s request at build time. For speedier retrieval, all of the data is cached on a headless CMS.
+// For better SEO performance, the page is pre-rendered and cached. If no other data fetching method is specified, Next.js will use this by default. It is used to implement Static Site Generation and Incremental Site Regeneration.
+// page can be build once , cached by a CDN and served to client almost instantly eg. blog pages , documentation page
+
+// getServerSideProps --- It will pre-render the page on every subsequent request. It is slower as compared to getStaticProps as the page is being rendered on every request. 
+// getServerSideProps props return JSON which will be used to render the page all this work will be handled automatically by Next.js. It could be used for calling a CMS, database, 
+// or other APIs directly from getServerSideProps. It is used to implement Server Side Rendering.
+
+// In contrast, server-side rendering generates the HTML on the server, dynamically creating the content each time a request is made. Static site generation is faster since the content is already
+// built and doesn't require server-side processing, while server-side rendering is more flexible, allowing for dynamic content and interactions.
 
 // .next folder for deployment
 
@@ -1374,28 +1345,6 @@
 // There is a wait time for the user
 // • With a pre-rendered page, the HTML is already generated and loads faster
 
-// 2. Pre-rendering helps with SEO
-
-// If you're building a blog or an e-commerce site, SEO is a concern
-// With a React app, if the search engine hits your page, it only sees a div tag with id equal to root
-// • If search engine hits a pre-rendered page though, all the content is present in the source code which
-// will help index that page If SEO is of concern for your app, pre-rendering is what you want
-
-// Pre-rendering Summary
-// Pre-rendering refers to the process of generating HTML with the necessary data for a page in our
-// application.
-// Pre-rendering can result in better performance and SEO.
-
-// Static Generation - How?
-// Next JS, by default will pre-render every page in our app
-// The HTML for every page will automatically be statically generated when we build our application
-// "Throughout this video, you've been mentioning that pages are generated at build time. But there
-// is no build for application yet, is there? Aren't we running the application in development mode?"
-// Prod Server - An optimized build is created once and you deploy that build. You don't make code
-// changes on the go once it is deployed
-// Dev Server - We should be able to make changes in our code and we want that code to immediately
-// reflect in the browser
-
 // Next.js is a React-based open-source framework that helps developers build server-side rendered React applications.
 
 // Next.js offers several advantages over React, including server-side rendering, automatic
@@ -1412,7 +1361,11 @@
 
 // If you export a function called getStaticProps (Static Site Generation) from a page, Next.js will pre-render this page at build time using the props returned by getStaticProps
 
-// The getStaticProps function is used to fetch data at build time for static site generation
+// libraries target a specific functionality, while a framework tries to provide everything required to develop a complete application
+
+// type of pre-rendering 
+// 1. Static Generation 
+// 2. Server side Rendering
 
 // compose ---
 // Function composition is a way of chaining multiple functions to create a new function. It is a way of solving a problem by reducing it into smaller solutions. As we see function composition happens from right to left.
@@ -1587,6 +1540,19 @@
 // Best regards,
 // Jatin Makad
 
+// HTML stands for HyperText Markup Language. It is a standard text formatting language used for developing web pages
+
+// !<!DOCTYPE> - this line tells the browser that this piece of coded is HTML5
+
+// elements - HTML Elements contain a starting tag, content, and an ending tag
+
+// Tags - HTML tags contain only starting and closing tag
+
+// the elements tell the browser what to display, the attributes define how they will behave.
+// The tags mark the beginning and the end of an element. They may not be necessary for some elements, especially the closing tags
+
+// Voided tags - HTML elements which do not have closing tags or do not need to be closed are Void elements. For Example <br />, <img />, <hr />, etc.
+
 // A div element is used for block-level organization and styling of page elements, whereas a span element is used for inline organization and styling
 
 // Inline elements are designed to take very minimal space while block elements are programmed so that they take up as much space as needed.
@@ -1607,6 +1573,9 @@
 
 // Async allows your script to run as soon as it's loaded, without blocking other elements on the page. Defer means your script will only execute after the page has finished loading
 
+// Semantic HTML tags are tags that define the meaning of the content they contain. For example, tags like <header>, <article>, and <footer> are semantic HTML tags. They clearly indicate the role of
+// the content they contain. On the other hand, tags like <div> and <span> are typical examples of non-semantic HTML elements
+
 // NPM is a package management that is used to install, uninstall, and update Javascript packages on your workstation, whereas NPX is a package executer that is used to directly execute Javascript
 // packages without installing them
 // defer and async javascript?
@@ -1622,9 +1591,6 @@
 // Tree shaking: Tree shaking is a process in which Webpack eliminates dead code that is not used in the application, resulting in smaller bundle sizes.
 // Using dynamic imports: Utilizing dynamic imports allows you to load modules asynchronously when needed, reducing the initial loading time.
 // Minification: Webpack offers plugins like UglifyJSPlugin or TerserPlugin to minify and compress the bundled code, reducing its size.
-
-
-
 
 // Socket IO  Start ----
 
@@ -1671,6 +1637,7 @@
 // io.sockets.on() ; //initial connection from a client.
 
 // Socket IO  End ----
+
 // Mada Property ----
 
 // it was basically a real state marketplace in which any company or property agent can register their property's . 
