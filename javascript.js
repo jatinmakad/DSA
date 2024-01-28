@@ -1060,7 +1060,7 @@
 // Problems With SEO
 // we have to import library to perform some specific actions
 
-// index.js : This file is the entry point of your React application. It is responsible for rendering the root component (App.js) and attaching it to the HTML document. 
+// index.js : This file is the entry point of your React application. It is responsible for rendering the root component (App.js) and attaching it to the HTML document.
 // It sets up the React DOM and provides the initial rendering of your app.
 
 // createRoot lets you create a root to display React components inside a browser DOM node.
@@ -1254,6 +1254,7 @@
 // }
 // console.log(a, "outer");
 
+<<<<<<< HEAD
 // I worked with 6 personal teams (4 developers, 1BA, 1PM) on the Mada properties website, and the main objective of this website is to list properties for customers
 // published by agents or companies that basically worked in UAE and Saudi region my main role was to manage and work on front end using a library like next js and
 // react js, in this our main objective to make site SEO friendly that's why we have chosen to work on Next the best part about this project is that I got to learn
@@ -1286,6 +1287,13 @@
 // The tags mark the beginning and the end of an element. They may not be necessary for some elements, especially the closing tags
 
 // Voided tags - HTML elements which do not have closing tags or do not need to be closed are Void elements. For Example <br />, <img />, <hr />, etc.
+=======
+// hi ,my name is jatin makad and I have completed my bachelor's of computer science engenneringng from LPU . from last 2.3 years i am working as a front end developer.
+// and in my previous role I worked on various projects mainly based on React js and Next js. i have wored on Responsive front end development,wireframe desinging ,
+// protype designing and API integrations for various projects.
+// I have also led a team of 4 front end developers in my previous project , helping them to improve there code and guideing them through code reviews 
+// I am known for my problem-solving skills and ability to work collaboratively with cross-functional teams.
+>>>>>>> 41561c3eec1fff7644141f665d9e91495c280e06
 
 // React maintains two Virtual DOM at each time, one contains the updated Virtual DOM and one which is just the pre-update version of this updated Virtual DOM.
 //  Now it compares the pre-update version with the updated Virtual DOM and figures out what exactly has changed in the DOM like which components have been changed.
@@ -1341,12 +1349,16 @@
 // React is a library for building user interfaces
 // You have to make decisions on other features of the app like routing, styling, authentication etc.
 
-// Next.js
-// A package that uses React for building user interfaces
-// Loaded with a lot more features that enable you to build full fledged production ready applications.
-// Features exactly like routing, styling, authentication, bundle optimization etc.
-// There's no need to install additional packages. Next.js provides everything for you
-// Opinions and conventions need to be followed to implement the above said features
+// getStaticProps -- It preloads all of the data needed for a given page and renders pages ahead of the user’s request at build time. For speedier retrieval, all of the data is cached on a headless CMS.
+// For better SEO performance, the page is pre-rendered and cached. If no other data fetching method is specified, Next.js will use this by default. It is used to implement Static Site Generation and Incremental Site Regeneration.
+// page can be build once , cached by a CDN and served to client almost instantly eg. blog pages , documentation page
+
+// getServerSideProps --- It will pre-render the page on every subsequent request. It is slower as compared to getStaticProps as the page is being rendered on every request. 
+// getServerSideProps props return JSON which will be used to render the page all this work will be handled automatically by Next.js. It could be used for calling a CMS, database, 
+// or other APIs directly from getServerSideProps. It is used to implement Server Side Rendering.
+
+// In contrast, server-side rendering generates the HTML on the server, dynamically creating the content each time a request is made. Static site generation is faster since the content is already
+// built and doesn't require server-side processing, while server-side rendering is more flexible, allowing for dynamic content and interactions.
 
 // .next folder for deployment
 
@@ -1368,28 +1380,6 @@
 // There is a wait time for the user
 // • With a pre-rendered page, the HTML is already generated and loads faster
 
-// 2. Pre-rendering helps with SEO
-
-// If you're building a blog or an e-commerce site, SEO is a concern
-// With a React app, if the search engine hits your page, it only sees a div tag with id equal to root
-// • If search engine hits a pre-rendered page though, all the content is present in the source code which
-// will help index that page If SEO is of concern for your app, pre-rendering is what you want
-
-// Pre-rendering Summary
-// Pre-rendering refers to the process of generating HTML with the necessary data for a page in our
-// application.
-// Pre-rendering can result in better performance and SEO.
-
-// Static Generation - How?
-// Next JS, by default will pre-render every page in our app
-// The HTML for every page will automatically be statically generated when we build our application
-// "Throughout this video, you've been mentioning that pages are generated at build time. But there
-// is no build for application yet, is there? Aren't we running the application in development mode?"
-// Prod Server - An optimized build is created once and you deploy that build. You don't make code
-// changes on the go once it is deployed
-// Dev Server - We should be able to make changes in our code and we want that code to immediately
-// reflect in the browser
-
 // Next.js is a React-based open-source framework that helps developers build server-side rendered React applications.
 
 // Next.js offers several advantages over React, including server-side rendering, automatic
@@ -1397,16 +1387,20 @@
 // deployment. Additionally, Next.js supports built-in SEO and analytics, making it easier to
 //  optimize your application for search engines and track user engagement.
 
-// Server-side rendering (SSR) is the process of rendering a web page on the server before sending it to the client's browser. 
-// SSR is important because it allows search engines to crawl and index your website's content, which can improve your website's SEO. 
+// Server-side rendering (SSR) is the process of rendering a web page on the server before sending it to the client's browser.
+// SSR is important because it allows search engines to crawl and index your website's content, which can improve your website's SEO.
 // Additionally, SSR can improve the initial page load time and improve the user experience for users with slow internet connections or devices.
 
-// Client-Side Rendering (CSR) and Server-Side Rendering (SSR) are two prominent rendering techniques in web development, each with its unique benefits. 
+// Client-Side Rendering (CSR) and Server-Side Rendering (SSR) are two prominent rendering techniques in web development, each with its unique benefits.
 // CSR excels in interactivity and performance, while SSR offers advantages in SEO and initial load performance.
 
 // If you export a function called getStaticProps (Static Site Generation) from a page, Next.js will pre-render this page at build time using the props returned by getStaticProps
 
-// The getStaticProps function is used to fetch data at build time for static site generation
+// libraries target a specific functionality, while a framework tries to provide everything required to develop a complete application
+
+// type of pre-rendering 
+// 1. Static Generation 
+// 2. Server side Rendering
 
 // compose ---
 // Function composition is a way of chaining multiple functions to create a new function. It is a way of solving a problem by reducing it into smaller solutions. As we see function composition happens from right to left.
@@ -1577,13 +1571,22 @@
 //   .then((res) => console.log(res, "resss"))
 //   .catch((err) => console.log(err, "err"));
 
-
-
 // I hope you’re doing well! I’m interested in the role you posted for your organization. I have a total experience of 2.3 years of Frontend development using ReactJs
 // Best regards,
 // Jatin Makad
 
+// HTML stands for HyperText Markup Language. It is a standard text formatting language used for developing web pages
 
+// !<!DOCTYPE> - this line tells the browser that this piece of coded is HTML5
+
+// elements - HTML Elements contain a starting tag, content, and an ending tag
+
+// Tags - HTML tags contain only starting and closing tag
+
+// the elements tell the browser what to display, the attributes define how they will behave.
+// The tags mark the beginning and the end of an element. They may not be necessary for some elements, especially the closing tags
+
+// Voided tags - HTML elements which do not have closing tags or do not need to be closed are Void elements. For Example <br />, <img />, <hr />, etc.
 
 // A div element is used for block-level organization and styling of page elements, whereas a span element is used for inline organization and styling
 
@@ -1608,6 +1611,13 @@
 
 // https://css-tricks.com/css-only-carousel/
 
+// Async allows your script to run as soon as it's loaded, without blocking other elements on the page. Defer means your script will only execute after the page has finished loading
+
+// Semantic HTML tags are tags that define the meaning of the content they contain. For example, tags like <header>, <article>, and <footer> are semantic HTML tags. They clearly indicate the role of
+// the content they contain. On the other hand, tags like <div> and <span> are typical examples of non-semantic HTML elements
+
+// NPM is a package management that is used to install, uninstall, and update Javascript packages on your workstation, whereas NPX is a package executer that is used to directly execute Javascript
+// packages without installing them
 // defer and async javascript?
 
 // Webpack is a powerful module bundler for JavaScript applications. It takes modules with dependencies and generates static assets that can be served to a browser. 
@@ -1621,8 +1631,51 @@
 // Using dynamic imports: Utilizing dynamic imports allows you to load modules asynchronously when needed, reducing the initial loading time.
 // Minification: Webpack offers plugins like UglifyJSPlugin or TerserPlugin to minify and compress the bundled code, reducing its size.
 
+// Socket IO  Start ----
 
+// WebSocket is a technology that enables two-way realtime communication between client and server. In contrast, Socket.IO is a library that provides an abstraction layer on top of WebSockets,
+//  making it easier to create realtime applications.
+// It seems that WebSockets have an edge in terms of performance over Socket.IO; for example, WebSockets have a much lower memory requirement compared to Socket.IO. However, some differences
+//  are to be expected. After all, Socket.IO is a more complex (and demanding) solution than raw WebSockets.
 
+// HTTP -- Hypertext Transfer Protocol
+// Websoket is a communication protocol same as HTTP , FTP and SMTP
+
+// connection -----
+// HTTP - is a one way data flow only client can send req. for data from server
+// Websocket - used to establish connection between client and server its a two way data flow
+
+// Socket IO is a library based on webscoket and easy to implement rather than traditional websocket
+
+// IO is basicaly a circuit with multiple socket in it
+// and socket is a single connection 
+
+// IO.emit is when client or server send req. to every client in that particular circuit 
+// sokcet.emit is when client or server send req. to particular user only
+
+// socket.brodcast.emilt - 
+// socket.to( id of particular socket to make connection ).emit() to trigger event for particular room
+// socket.join( room name ) to join people in room
+
+// emit is when event trigger ( this event ) 
+// on ( recive data )
+
+// socket.emit('message', "this is a test"); //sending to sender-client only
+// socket.broadcast.emit('message', "this is a test"); //sending to all clients except sender
+// socket.broadcast.to('game').emit('message', 'nice game'); //sending to all clients in 'game' room(channel) except sender
+// socket.to('game').emit('message', 'enjoy the game'); //sending to sender client, only if they are in 'game' room(channel)
+// socket.broadcast.to(socketid).emit('message', 'for your eyes only'); //sending to individual socketid
+// io.emit('message', "this is a test"); //sending to all clients, include sender
+// io.in('game').emit('message', 'cool game'); //sending to all clients in 'game' room(channel), include sender
+// io.of('myNamespace').emit('message', 'gg'); //sending to all clients in namespace 'myNamespace', include sender
+// socket.emit(); //send to all connected clients
+// socket.broadcast.emit(); //send to all connected clients except the one that sent the message
+// socket.on(); //event listener, can be called on client to execute on server
+// io.sockets.socket(); //for emiting to specific clients
+// io.sockets.emit(); //send to all connected clients (same as socket.emit)
+// io.sockets.on() ; //initial connection from a client.
+
+// Socket IO  End ----
 
 // Mada Property ----
 // it was basically a real state marketplace in which any company or property agent can register their property's . 

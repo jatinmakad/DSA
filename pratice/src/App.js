@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { useGetPostQuery } from "./redux/api";
 
@@ -8,7 +7,7 @@ function App() {
   if (isLoading) {
     return <p>........Loader</p>;
   }
-  return <div className="App"></div>;
+  return <div className="App">hello</div>;
 }
 
 export default App;
