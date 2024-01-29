@@ -297,7 +297,6 @@ var isAnagram = function (s, t) {
   }
 };
 
-
 // Two Number Add
 
 // let nums = [2, 7, 11, 15];
@@ -310,3 +309,178 @@ var isAnagram = function (s, t) {
 //   }
 //   hash[nums[i]] = i;
 // }
+
+// Bubble Sort
+
+// function bubbleSort(arr) {
+//   for (let j = arr.length; j > 0; j--) {
+//     for (let i = 0; i < j - 1; i++) {
+//       if (arr[i] > arr[i + 1]) {
+//         [arr[i], arr[i + 1]] = [arr[i + 1], arr[i]];
+//       }
+//     }
+//   }
+//   return arr
+// }
+// bubbleSort(arr);
+
+// let arr = [0, 4, 23, 5, 13, 6, 78, 89, 7, 12];
+// function selectioSort(arr) {
+//   for (let j = 0; j < arr.length - 1; j++) {
+//     let min = j;
+//     for (let i = j; i < arr.length; i++) {
+//       if (arr[min] > arr[i]) {
+//         min = i;
+//       }
+//     }
+//     [arr[j], arr[min]] = [arr[min], arr[j]];
+//   }
+//   return arr
+// }
+// console.log(selectioSort(arr));
+
+// let arr = [0, 4, 23, 5, 13, 6, 78, 89, 7, 12];
+// function insertionSort(arr) {
+//   let n = arr.length;
+//   for (let i = 1; i < n; i++) {
+//     let key = arr[i];
+//     let j = i - 1;
+//     while (j >= 0 && arr[j] > key) {
+//       arr[j + 1] = arr[j];
+//       j--;
+//     }
+//     arr[j + 1] = key;
+//   }
+//   return arr;
+// }
+// console.log(insertionSort(arr));
+
+// Array.prototype.myReduce = function (call, i) {
+//   let result = i;
+//   for (let i = 0; i < this.length; i++) {
+//     if (result !== undefined) {
+//       result = call(result, this[i], i, this);
+//     } else {
+//       result = this[i];
+//     }
+//   }
+//   return result;
+// };
+
+// let nums = [1,2,6,4,5,3] , K = 3
+// function solution(arr,k){
+//   console.log(arr,k)
+//   let temp = nums[0]
+//   for(let i =1;i<arr.length;i++){
+//     if(temp < nums[i]){
+//         temp = nums[i]
+//     }
+//   }
+//   console.log(temp)
+// }
+// solution(nums,K)
+
+// function PromisePolly(executor) {
+//   let onResolve,
+//     value,
+//     onReject,
+//     isCalled = false,
+//     isFullfilled = false,
+//     isRejected = false;
+
+//   this.then = function (callback) {
+//     onResolve = callback;
+//     if (isFullfilled && !isCalled) {
+//       isCalled = true;
+//       onResolve(value);
+//     }
+//     return this;
+//   };
+//   this.catch = function (callback) {
+//     onReject = callback;
+//     if (isRejected && !isCalled) {
+//       isCalled = true;
+//       onReject(value);
+//     }
+//     return this;
+//   };
+//   function resolve(val) {
+//     isFullfilled = true;
+//     value = val;
+//     if (typeof onResolve == "function") {
+//       onResolve(val);
+//       isCalled = true;
+//     }
+//   }
+//   function rejected(val) {
+//     isRejected = true;
+//     value = val;
+//     if (typeof onReject == "function") {
+//       onReject(val);
+//       isCalled = true;
+//     }
+//   }
+//   executor(resolve, rejected);
+// }
+
+// new PromisePolly((res, rej) => {
+//   setTimeout(() => {
+//     rej("hello ji");
+//   }, 1000);
+// })
+//   .then((res) => console.log(res, "then"))
+//   .catch((res) => console.log(res, "catch"));
+
+// let p1 = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     res("resolved 1");
+//   }, 5000);
+// });
+// let p2 = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     res("resolved 2");
+//   }, 3000);
+// });
+// let p3 = new Promise((res, rej) => {
+//   setTimeout(() => {
+//     rej("resolved 3");
+//   }, 2000);
+// });
+
+// Promise.allSettled([p1,p2,p3]).then((res) => console.log(res,'resss')).catch((res) => console.log(res,'catch'))
+
+// function PromiseAny(promise) {
+//   let errorResponse = [];
+//   let resolvedResponse = [];
+//   return new Promise((resolved, rejected) => {
+//     promise.forEach(async (element, i) => {
+//       try {
+//         let res = await element;
+//         resolvedResponse.push(res);
+//         resolved(res);
+//       } catch (error) {
+//         error.push(error);
+//       }
+//       if (errorResponse.length == promise.length) {
+//         rejected("Aggregator Error");
+//       }
+//     });
+//   });
+// }
+
+// function PromiseRace(promise) {
+//   return new Promise((resolved, rejected) => {
+//     promise.forEach(async (element, i) => {
+//       try {
+//         let res = await element;
+//         resolved(res);
+//       } catch (error) {
+//         rejected(error);
+//       }
+//     });
+//   });
+// }
+
+// PromiseRace([p1, p2, p3])
+//   .then((res) => console.log(res, "resss"))
+//   .catch((res) => console.log(res, "catch"));

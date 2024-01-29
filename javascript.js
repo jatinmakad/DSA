@@ -6,15 +6,6 @@
 //   return temp;
 // };
 
-// Array.prototype.myReduce = function (callback, val) {
-//   let value = val;
-//   for (i = 0; i < this.length; i++) {
-//     value += this[i];
-//   }
-//   return value;
-// };
-// let arr = [2, 6, 3, 6, 3, 677, 7, 6];
-// console.log(arr.myReduce((r, i) => r + i, 0));
 // console.log(arr.mapFunc((r, i) => Math.round(r / 2)));
 
 // new Promise((res,req) => {
@@ -715,6 +706,8 @@
 
 // The directive looks like a string: "use strict" or 'use strict'. When it is located at the top of a script, the whole script works the “modern” way.
 
+// “This” keyword refers to an object that is executing the current piece of code. It references the object that is executing the current function.
+
 // In Javascript, functions are first class objects. First-class functions means when functions in that language are treated like any other variable.
 // For example, in such a language, a function can be passed as an argument to other functions, can be returned by another function and can be assigned as a value to a variable. For example, in the below example, handler functions assigned to a listener
 
@@ -786,6 +779,8 @@
 
 // A closure is the combination of a function and the lexical environment within which that function was declared.
 // i.e, It is an inner function that has access to the outer or enclosing function’s variables.
+
+// Propagation refers to how events travel through the Document Object Model (DOM) tree
 
 // Promise -- Promise is a Javascript object that represents the eventual completion(or failure) of an asynchronous operation and its resulting value.
 // It allows you to handle async operations in a more elegant way and avoid callback hell problem.
@@ -1254,26 +1249,6 @@
 // }
 // console.log(a, "outer");
 
-// I worked with 6 personal teams (4 developers, 1BA, 1PM) on the Mada properties website, and the main objective of this website is to list properties for customers
-// published by agents or companies that basically worked in UAE and Saudi region my main role was to manage and work on front end using a library like next js and
-// react js, in this our main objective to make site SEO friendly that's why we have chosen to work on Next the best part about this project is that I got to learn
-// a lot about Next js, which I was really curious about, we have deployed the first version in 2 months and then continue to improve with feedback by our client
-// and QA team.
-
-// I worked with 6 person teams (4 developers, 1BA, 1 PM) on the "Mada properties" website, and the main objective of this website is to list properties for customers
-// published by agents or companies that worked in the UAE and Saudi region and many other features, my main role was to manage and work on the front end using a library like Next JS,
-// React JS, Google Map APIs, and i18next for translation between English and Saudi, our main objective is to make the site SEO friendly which's why we have chosen to work on it Next JS the best part about this project is that I got to learn
-// a lot about Next js, which I was really curious about, we have deployed the first version in 2 months and then continue to improve with feedback from our client
-// and QA team.
-
-// completed my notice period and immediately available
-
-// Fancy betting app In this we have a 4 personal team (3 developers and 1 PM), so basically this project consists of full fledge online gaming platform that has casino
-// , multiple sports games, and many other features like listing matches according to their sports type, league and then the user can place a bet on multiple markets
-// for a single match like fancy, Betfair , bookmaker and user can also watch live matches and scoreboard my role in this project is to manage front end for mobile
-// and web responive we have used React js library for front end and worked on new features like working with socket IO for getting odds of matches in real-time
-// constanly updating odds in our site for all markets
-
 // HTML stands for HyperText Markup Language. It is a standard text formatting language used for developing web pages
 
 // !<!DOCTYPE> - this line tells the browser that this piece of coded is HTML5
@@ -1286,11 +1261,6 @@
 // The tags mark the beginning and the end of an element. They may not be necessary for some elements, especially the closing tags
 
 // Voided tags - HTML elements which do not have closing tags or do not need to be closed are Void elements. For Example <br />, <img />, <hr />, etc.
-// hi ,my name is jatin makad and I have completed my bachelor's of computer science engenneringng from LPU . from last 2.3 years i am working as a front end developer.
-// and in my previous role I worked on various projects mainly based on React js and Next js. i have wored on Responsive front end development,wireframe desinging ,
-// protype designing and API integrations for various projects.
-// I have also led a team of 4 front end developers in my previous project , helping them to improve there code and guideing them through code reviews 
-// I am known for my problem-solving skills and ability to work collaboratively with cross-functional teams.
 
 // React maintains two Virtual DOM at each time, one contains the updated Virtual DOM and one which is just the pre-update version of this updated Virtual DOM.
 //  Now it compares the pre-update version with the updated Virtual DOM and figures out what exactly has changed in the DOM like which components have been changed.
@@ -1307,20 +1277,6 @@
 //    function-based component it's just a plane js function and if we have to perform some kind of side effect or manage state we need hooks for it which are offered by React itself
 // 3. after the introduction of hooks in React V16 function components are as powerful as class-based components and it's easier to read, write or manage code in function rather than class-based components cause it's more complex to read and write
 
-// Kth smallest element in Array
-
-// let nums = [1,2,6,4,5,3] , K = 3
-// function solution(arr,k){
-//   console.log(arr,k)
-//   let temp = nums[0]
-//   for(let i =1;i<arr.length;i++){
-//     if(temp < nums[i]){
-//         temp = nums[i]
-//     }
-//   }
-//   console.log(temp)
-// }
-// solution(nums,K)
 
 // let nums = [3, 5, 2, 8, 11],
 //   target = 10;
@@ -1346,13 +1302,17 @@
 // React is a library for building user interfaces
 // You have to make decisions on other features of the app like routing, styling, authentication etc.
 
-// getStaticProps -- It preloads all of the data needed for a given page and renders pages ahead of the user’s request at build time. For speedier retrieval, all of the data is cached on a headless CMS.
+// getStaticProps -- It preloads all of the data needed for a given page and renders pages ahead of the user’s request at build time.
+// all of the data is cached on a headless CMS.
 // For better SEO performance, the page is pre-rendered and cached. If no other data fetching method is specified, Next.js will use this by default. It is used to implement Static Site Generation and Incremental Site Regeneration.
 // page can be build once , cached by a CDN and served to client almost instantly eg. blog pages , documentation page
 
 // getServerSideProps --- It will pre-render the page on every subsequent request. It is slower as compared to getStaticProps as the page is being rendered on every request. 
 // getServerSideProps props return JSON which will be used to render the page all this work will be handled automatically by Next.js. It could be used for calling a CMS, database, 
 // or other APIs directly from getServerSideProps. It is used to implement Server Side Rendering.
+
+// P1 - it fetches the data first before sending the page to the client. Should the client happen to issue a subsequent request, the data is fetched again.
+// P2 - Using GetServerSideProps allows you to improve your SEO as in this method the data is rendered before it reaches the client
 
 // In contrast, server-side rendering generates the HTML on the server, dynamically creating the content each time a request is made. Static site generation is faster since the content is already
 // built and doesn't require server-side processing, while server-side rendering is more flexible, allowing for dynamic content and interactions.
@@ -1396,8 +1356,23 @@
 // libraries target a specific functionality, while a framework tries to provide everything required to develop a complete application
 
 // type of pre-rendering 
-// 1. Static Generation 
-// 2. Server side Rendering
+// 1. Static site Generation 
+// 2. Incremental Site Regeneration
+// 3. Server side Rendering
+
+// 1. Static Site Generation (SSG): It is the method that generates HTML at build time. The pre-rendered HTML is then used on each request. 
+// If we have an HTML page that doesn’t require any external data, Next Js will pre-render its content by default. (Example: About Page). 
+// But if our web page requires data from some external API then Next Js, as part of the static generation process will fetch & download the 
+// data in advance & generate the HTML. All of this is done during the build time. All of the pre-generated content is then stored in a CDN, so that
+// whenever a user requests to view the web page, a cached version is sent, resulting in improved performance.
+
+// 2. Incremental Site Regeneration: In static site generation, there is no room for dynamic content. In this method, HTML is generated at regular intervals,
+// allowing you to create or update static pages after you have built the site. It combines the power of static generation with the flexibility of dynamic content.
+// Whenever a request is made, the page is generated statically with the initialization of a specific interval (say, 60 seconds). After that interval, the page is 
+// re-downloaded or re-generated. So the first user may see stale data, but from then on, every user will see fresh data.
+
+// 3. Server-Side Rendering: It is the pre-rendering method that generates an HTML page for each request, making it slower than the other two methods because no
+// content is cached. However, it is appropriate for dynamic content that changes frequently.
 
 // compose ---
 // Function composition is a way of chaining multiple functions to create a new function. It is a way of solving a problem by reducing it into smaller solutions. As we see function composition happens from right to left.
@@ -1603,6 +1578,10 @@
 
 // A semantic element clearly describes its meaning to both the browser and the developer. Examples of non-semantic elements: <div> and <span></span>
 
+// The concept of specificity in CSS determines which styles will be applied to an element when there are conflicting rules. Specificity is calculated based on the
+// selectors used in the CSS rules. It follows a specific hierarchy where inline styles have the highest specificity, followed by IDs, classes, and finally, element
+// selectors.
+
 // Metadata is data (information) about data. <meta> tags always go inside the <head> element, and are typically used to specify character set, page description,
 // keywords, author of the document, and viewport settings
 
@@ -1615,7 +1594,6 @@
 
 // NPM is a package management that is used to install, uninstall, and update Javascript packages on your workstation, whereas NPX is a package executer that is used to directly execute Javascript
 // packages without installing them
-// defer and async javascript?
 
 // Webpack is a powerful module bundler for JavaScript applications. It takes modules with dependencies and generates static assets that can be served to a browser. 
 // It simplifies the process of managing and bundling various assets like JavaScript, CSS, and images, enabling efficient resource utilization and enhancing application
