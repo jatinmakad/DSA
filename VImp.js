@@ -367,19 +367,6 @@ var isAnagram = function (s, t) {
 //   return result;
 // };
 
-// let nums = [1,2,6,4,5,3] , K = 3
-// function solution(arr,k){
-//   console.log(arr,k)
-//   let temp = nums[0]
-//   for(let i =1;i<arr.length;i++){
-//     if(temp < nums[i]){
-//         temp = nums[i]
-//     }
-//   }
-//   console.log(temp)
-// }
-// solution(nums,K)
-
 // function PromisePolly(executor) {
 //   let onResolve,
 //     value,
