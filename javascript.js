@@ -731,8 +731,6 @@
 
 // Class is a blueprint of a real-life entity. It describes how the object will look alike, what characteristics it holds and what kind of actions we can perform on it.
 
-// A promise is an object that may produce a single value some time in the future with either a resolved value or a reason that it’s not resolved(for example, network error). It will be in one of the 3 possible states: fulfilled, rejected, or pending.
-
 // Currying is the process of taking a function with multiple arguments and turning it into a sequence of functions each with only a single argument.
 
 // Call: The call() method invokes a function with a given this value and arguments provided one by one
@@ -1010,7 +1008,7 @@
 // }
 // const Debounce = useDebounce(getData, 1000);
 
-// Throttling ---- Throttling is a technique, to limit the execution of an event handler function, even when this event triggers continuously due to user actions. (ex: browser resizing)
+// Throttling is a technique, to limit the execution of an event handler function, even when this event triggers continuously due to user actions. (ex: browser resizing)
 
 // event bubling - When an event happens on an element, it first runs the handlers on it, then on its parent, then all the way up on other ancestors.
 
@@ -1676,8 +1674,15 @@
 // I have also led a team of 3 front end developers in my previous project , helping them to improve there code and guideing them through code reviews 
 // I am known for my problem-solving skills and ability to work collaboratively with cross-functional teams.
 
-
 // event propagation where the event first triggers on the innermost target element, and then successively triggers on the ancestors (parents) of the target element
 //  in the same nesting hierarchy till it reaches the outermost DOM element or document object
 
 // CDN content delivery network
+// in the same nesting hierarchy till it reaches the outermost DOM element or document object
+
+// Next js - 14.1
+// REact js - 18.2
+
+// React Portals are a powerful feature in React that allows you to render components outside the current React tree hierarchy.
+
+// useEffect is executed after the browser renders the component and updates the DOM, while useLayoutEffect is executed before the browser updates the screen
