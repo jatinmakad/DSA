@@ -1,6 +1,7 @@
 import "./App.css";
 import Comp1Exp from "./HocComp/Comp1";
 import Comp2Exp from "./HocComp/Comp2";
+import Search from "./Search";
 import { useGetPostQuery } from "./redux/api";
 
 function App() {
@@ -13,8 +14,9 @@ function App() {
 
 
   return <div>
-    <Comp1Exp/>
-    <Comp2Exp/>
+    {/* <Comp1Exp/>
+    <Comp2Exp/> */}
+    <Search/>
   </div>
 }
 
