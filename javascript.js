@@ -1645,21 +1645,43 @@
 // i have also Integrated Google Maps for enhanced property location visualization, improving user engagement.
 // Implemented i18next Translation for a seamless multilingual user experience, expanding the platform’s reach by
 
+// we are 5 person team (4 developer , 1 BA , 1 PM ) 
+// in this project my roles is to manage front end , desing wireframe , guideing 2 developers on admin panel , working on clients feedback 
+
 // Fancy ---
 // it was a fantcy gamming web app where user can play fantcy cricket , football , hockey and other team games 
 // i led front end of this project using React js , context API  ,also used socket IO for real time data integration it was little bit heavy website 
 // due to image and real time data flow so I had to be concious about it's code i follwed best practices of react like optimizing the react code using lazy loading , image optimization and used CDN
 // for higher size media
 
-// I have worked mainly on admin panel 
-// utilized the ReactJS, Tailwind CSS to build robust and scalable solutions in this project, participated in bug fixing and code improvement
-// resulting enhanced user experience
-
 // hi , my name is jatin makad and I have completed my bachelor's of computer science engenneringng from LPU . from last 2.3 years i am working as a front end developer.
 // and in my previous role I worked on various projects mainly based on React js and Next js. i have wored on Responsive front end development,wireframe desinging ,
 // protype designing and API integrations for various projects.
 // I have also led a team of 3 front end developers in my previous project , helping them to improve there code and guideing them through code reviews 
 // I am known for my problem-solving skills and ability to work collaboratively with cross-functional teams.
+
+// completey day to day responsibilty , bug fixing , UI development , api integration , improving code quality and implemented new feature based on clien requirnment
+
+// 1. Mada Properties 
+// 2. Fancy Betting App
+// 3. Worked on 2-3 Admin panel of differend project
+// 4. RBC Website -> aritist / customer
+
+
+
+// 8 - 10 LPA
+
+// 8,9 -> i was offered more than this number in my previous uprazel and it's far too low than my expectation
+// 10 -> thank you for this offer but with the expericane and experties i carry it is lesser than the industry standard and my expectation too . i would appreciate if you will increase this number to 12 
+// 12 -> ok thanku kal se araha
+
+// right now i don't have state of this project cause this project is hand over to client on janurary and sin
+
+
+// I have worked mainly on admin panel 
+// utilized the ReactJS, Tailwind CSS to build robust and scalable solutions in this project, participated in bug fixing and code improvement
+// resulting enhanced user experience
+
 
 // event propagation where the event first triggers on the innermost target element, and then successively triggers on the ancestors (parents) of the target element
 //  in the same nesting hierarchy till it reaches the outermost DOM element or document object
