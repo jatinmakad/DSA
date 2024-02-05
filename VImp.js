@@ -10,7 +10,6 @@ var minSubArrayLen = function (target, nums) {
   for (let i = 0; i < nums.length; i++) {
     sum += nums[i];
     while (sum >= target) {
-      console.log(result, i - left + 1);
       result = Math.min(result, i - left + 1);
       sum -= nums[left++];
     }
@@ -471,3 +470,17 @@ var isAnagram = function (s, t) {
 // PromiseRace([p1, p2, p3])
 //   .then((res) => console.log(res, "resss"))
 //   .catch((res) => console.log(res, "catch"));
+
+
+
+// function Flat(arr, result) {
+//   for (let i = 0; i < arr.length; i++) {
+//     if (Array.isArray(arr[i])) {
+//       Flat(arr[i], result);
+//     } else {
+//       result.push(arr[i]);
+//     }
+//   }
+//   return result;
+// }
+// console.log(Flat([1, 2, 3, 4, 5, 6, [1, 2, 3, 4]], []));

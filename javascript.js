@@ -1247,19 +1247,6 @@
 // }
 // console.log(a, "outer");
 
-// HTML stands for HyperText Markup Language. It is a standard text formatting language used for developing web pages
-
-// !<!DOCTYPE> - this line tells the browser that this piece of coded is HTML5
-
-// elements - HTML Elements contain a starting tag, content, and an ending tag
-
-// Tags - HTML tags contain only starting and closing tag
-
-// the elements tell the browser what to display, the attributes define how they will behave.
-// The tags mark the beginning and the end of an element. They may not be necessary for some elements, especially the closing tags
-
-// Voided tags - HTML elements which do not have closing tags or do not need to be closed are Void elements. For Example <br />, <img />, <hr />, etc.
-
 // React maintains two Virtual DOM at each time, one contains the updated Virtual DOM and one which is just the pre-update version of this updated Virtual DOM.
 //  Now it compares the pre-update version with the updated Virtual DOM and figures out what exactly has changed in the DOM like which components have been changed.
 //   This process of comparing the current Virtual DOM tree with the previous one is known as ‘diffing’. Once React finds out what exactly has changed then it updates those objects only, on real DOM.
@@ -1678,10 +1665,9 @@
 //  in the same nesting hierarchy till it reaches the outermost DOM element or document object
 
 // CDN content delivery network
-// in the same nesting hierarchy till it reaches the outermost DOM element or document object
 
 // Next js - 14.1
-// REact js - 18.2
+// React js - 18.2
 
 // React Portals are a powerful feature in React that allows you to render components outside the current React tree hierarchy.
 
