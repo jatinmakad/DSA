@@ -836,6 +836,7 @@
 //     res("promis 2");
 //     },5000)
 //   });
+
 // Promise.all([p, p2]).then((res) => console.log(res,"res")).catch((err) => console.log(err, "err"));
 // Promise.allSettled([p,p2]).then((res) => console.log(res,'res')).catch((err) => console.log(err,'err'))
 // Promise.any([p,p2]).then((res) => console.log(res,'res')).catch((err) => console.log(err,'err'))
@@ -1103,6 +1104,22 @@
 // Uncontrolled components are the ones having control of their own state and manage the behaviors on themselves.
 // The Uncontrolled Components are the ones that store their own state internally, and you query the DOM using a ref to find its current value when you need it.
 
+// React maintains two Virtual DOM at each time, one contains the updated Virtual DOM and one which is just the pre-update version of this updated Virtual DOM.
+//  Now it compares the pre-update version with the updated Virtual DOM and figures out what exactly has changed in the DOM like which components have been changed.
+//   This process of comparing the current Virtual DOM tree with the previous one is known as ‘diffing’. Once React finds out what exactly has changed then it updates those objects only, on real DOM.
+
+// React uses something called batch updates to update the real DOM. It just means that the changes to the real DOM are sent in batches instead of sending any
+// update for a single change in the state of a component.
+
+// We have seen that the re-rendering of the UI is the most expensive part and React manages to do this most efficiently by ensuring that the Real DOM
+//  receives batch updates to re-render the UI. This entire process of transforming changes to the real DOM is called Reconciliation.
+
+// 1. class-based components are state-full components and function components are stateless components
+// 2. class-based components don't need any extra function to manage their component state or to perform any kind of side effect to its component and on the other hand
+//    function-based component it's just a plane js function and if we have to perform some kind of side effect or manage state we need hooks for it which are offered by React itself
+// 3. after the introduction of hooks in React V16 function components are as powerful as class-based components and it's easier to read, write or manage code in function rather than class-based components cause it's more complex to read and write
+
+
 // Redux is an open-source JavaScript library used to manage application state.
 // Redux helps apps to scale by providing a sensible way to manage state through a unidirectional data flow model
 
@@ -1260,20 +1277,6 @@
 
 // Voided tags - HTML elements which do not have closing tags or do not need to be closed are Void elements. For Example <br />, <img />, <hr />, etc.
 
-// React maintains two Virtual DOM at each time, one contains the updated Virtual DOM and one which is just the pre-update version of this updated Virtual DOM.
-//  Now it compares the pre-update version with the updated Virtual DOM and figures out what exactly has changed in the DOM like which components have been changed.
-//   This process of comparing the current Virtual DOM tree with the previous one is known as ‘diffing’. Once React finds out what exactly has changed then it updates those objects only, on real DOM.
-
-// React uses something called batch updates to update the real DOM. It just means that the changes to the real DOM are sent in batches instead of sending any
-// update for a single change in the state of a component.
-
-// We have seen that the re-rendering of the UI is the most expensive part and React manages to do this most efficiently by ensuring that the Real DOM
-//  receives batch updates to re-render the UI. This entire process of transforming changes to the real DOM is called Reconciliation.
-
-// 1. class-based components are state-full components and function components are stateless components
-// 2. class-based components don't need any extra function to manage their component state or to perform any kind of side effect to its component and on the other hand
-//    function-based component it's just a plane js function and if we have to perform some kind of side effect or manage state we need hooks for it which are offered by React itself
-// 3. after the introduction of hooks in React V16 function components are as powerful as class-based components and it's easier to read, write or manage code in function rather than class-based components cause it's more complex to read and write
 
 
 // let nums = [3, 5, 2, 8, 11],
